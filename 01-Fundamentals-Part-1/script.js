@@ -11,4 +11,5 @@ let person = "sagar";
 let PI = 3.1415;
 
 let myFirstJob = "software engineer";
+let currentJob = "Product Support Engineer (Slack)";
 console.log(myFirstJob);
