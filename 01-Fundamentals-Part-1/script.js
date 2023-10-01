@@ -10,6 +10,6 @@ console.log(firstName);
 let person = "sagar";
 let PI = 3.1415;
 
-let myFirstJob = "software engineer";
+let myFirstJob = "engineer";
 let currentJob = "Product Support Engineer (Slack)";
 console.log(myFirstJob);
