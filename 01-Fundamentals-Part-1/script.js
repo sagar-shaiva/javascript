@@ -70,23 +70,42 @@ console.log(myFirstJob);
 // const averageAge = (ageSagar + ageMadhu) / 2;
 // console.log(ageSagar, ageMadhu, averageAge);
 
-const firstName = "Sagar";
-const job = "engineer";
-const birthYear = 2000;
-const year = 2023;
-const sagar =
-  "I'm " + firstName + ", a " + (year - birthYear) + " years old " + job + "!";
-console.log(sagar);
+// const firstName = "Sagar";
+// const job = "engineer";
+// const birthYear = 2000;
+// const year = 2023;
+// const sagar =
+//   "I'm " + firstName + ", a " + (year - birthYear) + " years old " + job + "!";
+// console.log(sagar);
 
-const newSagar = `I'm ${firstName}, a ${year - birthYear} years old ${job} !`;
-console.log(newSagar);
+// const newSagar = `I'm ${firstName}, a ${year - birthYear} years old ${job} !`;
+// console.log(newSagar);
 
-console.log(
-  "im super\n\
-and fine\n\
-perfect"
-);
+// console.log(
+//   "im super\n\
+// and fine\n\
+// perfect"
+// );
 
-console.log(`I'm Sagar
-and im
-engineer`);
+// console.log(`I'm Sagar
+// and im
+// engineer`);
+
+// const age = 15;
+
+// if (age >= 18) {
+//   console.log("Can have driving license");
+// } else {
+//   const yearsLeft = 18 - age;
+//   console.log(`too young. wait another ${yearsLeft} years :)`);
+// }
+
+// const birthYear = 2000;
+// let century;
+// if (birthYear <= 2000) {
+//   century = 20;
+// } else {
+//   century = 21;
+// }
+
+// console.log(century);
