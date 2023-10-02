@@ -1,4 +1,4 @@
-// Challenge
+// Challenge 1
 
 const massMark = 78;
 const heightMark = 1.69;
