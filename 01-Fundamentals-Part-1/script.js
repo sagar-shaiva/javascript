@@ -109,3 +109,30 @@ console.log(myFirstJob);
 // }
 
 // console.log(century);
+
+//type conversion
+// const inputYear = "2000";
+// console.log(inputYear + 23);
+// console.log(Number(inputYear) + 23);
+// console.log(String(23));
+// console.log(Number("sagar"));
+
+// //type coercion
+// console.log("im " + 23 + " years old");
+// console.log("12" + 3);
+// console.log("12" - "2" - "5");
+// console.log("12" - "2");
+// console.log("12" / "2");
+
+// let n = "10";
+// n = n - 1;
+// console.log(n);
+
+// 5 FALSY VALUES
+console.log(Boolean(0));
+console.log(Boolean(undefined));
+console.log(Boolean(NaN));
+console.log(Boolean(""));
+console.log(Boolean(null));
+console.log(Boolean({}));
+console.log(Boolean("sagar"));
