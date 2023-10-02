@@ -129,10 +129,55 @@ console.log(myFirstJob);
 // console.log(n);
 
 // 5 FALSY VALUES
-console.log(Boolean(0));
-console.log(Boolean(undefined));
-console.log(Boolean(NaN));
-console.log(Boolean(""));
-console.log(Boolean(null));
-console.log(Boolean({}));
-console.log(Boolean("sagar"));
+// console.log(Boolean(0));
+// console.log(Boolean(undefined));
+// console.log(Boolean(NaN));
+// console.log(Boolean(""));
+// console.log(Boolean(null));
+// console.log(Boolean({}));
+// console.log(Boolean("sagar"));
+
+// const age = "18";
+
+// if (age === 18) console.log("you just became an adult :D strict");
+// if (age == 18) console.log("you just became an adult :D loose");
+
+// const favourite = Number(prompt("what is your favourite number?"));
+// console.log(typeof favourite);
+
+// if (favourite === 9) {
+//   console.log("lucky number :)");
+// } else if (favourite === 2) {
+//   console.log("great number");
+// } else if (favourite === 5) {
+//   console.log("nice one");
+// } else {
+//   console.log("your cool number is not 2 and 9");
+// }
+
+// if (favourite !== 9) {
+//   console.log("why not 9?");
+// }
+
+// logical operator
+
+// const hasDriverLicense = true; //A
+// const hasGoodVision = true; //B
+
+// console.log(hasDriverLicense && hasGoodVision);
+// console.log(hasDriverLicense || hasGoodVision);
+// console.log(!hasDriverLicense);
+
+// if (hasDriverLicense && hasGoodVision) {
+//   console.log("able to drive");
+// } else {
+//   console.log("someone else should drive");
+// }
+
+// const isTired = false; //C
+
+// if (hasDriverLicense && hasGoodVision && !isTired) {
+//   console.log("drive crazy");
+// } else {
+//   console.log("no drive");
+// }
