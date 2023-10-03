@@ -44,17 +44,27 @@
 // }
 
 // BONUS 1
-const scoreDolphins = (97 + 112 + 101) / 3;
-const scoreKoalas = (109 + 95 + 106) / 3;
+// const scoreDolphins = (97 + 112 + 101) / 3;
+// const scoreKoalas = (109 + 95 + 106) / 3;
 
-if (scoreDolphins >= 100 && scoreDolphins > scoreKoalas) {
-  console.log("Dolphins win the trophy");
-} else if (scoreKoalas >= 100 && scoreKoalas > scoreDolphins) {
-  console.log("Koalas win the trophy");
-} else if (
-  scoreDolphins === scoreKoalas &&
-  scoreDolphins >= 100 &&
-  scoreKoalas >= 100
-) {
-  console.log("both win trophy");
-}
+// if (scoreDolphins >= 100 && scoreDolphins > scoreKoalas) {
+//   console.log("Dolphins win the trophy");
+// } else if (scoreKoalas >= 100 && scoreKoalas > scoreDolphins) {
+//   console.log("Koalas win the trophy");
+// } else if (
+//   scoreDolphins === scoreKoalas &&
+//   scoreDolphins >= 100 &&
+//   scoreKoalas >= 100
+// ) {
+//   console.log("both win trophy");
+// }
+
+// CHALLENGE 4 ---------------
+
+const bill = 275;
+
+const tip = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+
+console.log(
+  `The bill was ${bill} , the tip was ${tip}, and the total value ${bill + tip}`
+);
