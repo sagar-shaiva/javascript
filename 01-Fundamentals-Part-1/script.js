@@ -181,3 +181,53 @@ console.log(myFirstJob);
 // } else {
 //   console.log("no drive");
 // }
+
+// switch statement-----------------
+
+// const day = "monday";
+
+// switch (day) {
+//   case "monday":
+//     console.log("work started");
+//     console.log("Kick start");
+//     break;
+//   case "tuesday":
+//     console.log("continue working");
+//     break;
+//   case "wednesday":
+//   case "thursday":
+//     console.log("keep on learning and coding");
+//     break;
+//   case "friday":
+//     console.log("chill out");
+//     break;
+//   case "saturday":
+//     console.log("attend M.tech classes");
+//     break;
+//   case "sunday":
+//     console.log("Take rest and enjoy");
+//     break;
+//   default:
+//     console.log("Not in a earth day");
+// }
+
+// // conditional ternery operator
+
+// const age = 23;
+
+// // age >= 18 ? console.log("ok boy") : console.log("not ok boy");
+
+// const drink = age >= 18 ? "wine🍷" : "water💧";
+
+// console.log(drink);
+
+// let drink2;
+// if (age >= 18) {
+//   drink2 = "wine 🍷";
+// } else {
+//   drink2 = "water 💧";
+// }
+
+// console.log(drink2);
+
+// console.log(`i like to drink ${age >= 18 ? "wine🍷" : "water 💧"}`);
