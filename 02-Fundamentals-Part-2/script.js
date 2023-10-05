@@ -145,30 +145,114 @@
 const friends = ["sagar", "suraj", "madhu", "shiva"];
 
 // ADD ELEMENTS
-const newLength = friends.push("Gani");
-console.log(friends);
-console.log(newLength);
+// const newLength = friends.push("Gani");
+// console.log(friends);
+// console.log(newLength);
 
-friends.unshift("Samurai");
-console.log(friends);
+// friends.unshift("Samurai");
+// console.log(friends);
 
-// REMOVE ELEMENTS
-friends.pop(); // Last
-const popped = friends.pop();
-console.log(popped);
-console.log(friends);
+// // REMOVE ELEMENTS
+// friends.pop(); // Last
+// const popped = friends.pop();
+// console.log(popped);
+// console.log(friends);
 
-friends.shift();
-console.log(friends);
+// friends.shift();
+// console.log(friends);
 
-friends.push(23);
-console.log(friends.indexOf("sagar"));
-console.log(friends.indexOf("mom"));
-console.log(friends.includes("sagar"));
-console.log(friends.includes("mom"));
-console.log(friends.includes("23"));
-console.log(friends.includes(23));
+// friends.push(23);
+// console.log(friends.indexOf("sagar"));
+// console.log(friends.indexOf("mom"));
+// console.log(friends.includes("sagar"));
+// console.log(friends.includes("mom"));
+// console.log(friends.includes("23"));
+// console.log(friends.includes(23));
 
-if (friends.includes("suraj")) {
-  console.log("your friend suraj is there");
-}
+// if (friends.includes("suraj")) {
+//   console.log("your friend suraj is there");
+// }
+
+// OBJECTS
+
+// const sagarArrays = ["s", "sagar", 2023 - 2000, "engineer", ["suraj", "madhu"]];
+
+// const sagar = {
+//   firstName: "s",
+//   lastName: "sagar",
+//   age: 2023 - 2000,
+//   job: "engineer",
+//   friends: ["suraj", "madhu"],
+// };
+
+// const sagar = {
+//   firstName: "s",
+//   lastName: "sagar",
+//   age: 2023 - 2000,
+//   job: "engineer",
+//   friends: ["suraj", "madhu"],
+// };
+
+// console.log(sagar);
+// console.log(sagar.firstName);
+// console.log(sagar["lastName"]);
+
+// const nameKey = "Name";
+// console.log(sagar["first" + nameKey]);
+// console.log(sagar["last" + nameKey]);
+
+// const interestedIn = prompt(
+//   "what do you want to know about jonas? choose between firstName,lastName,age,job and friends"
+// );
+
+// console.log(sagar[interestedIn]);
+
+// if (sagar[interestedIn]) {
+//   console.log(sagar[interestedIn]);
+// } else {
+//   console.log(
+//     "wrong request choose between firstName,lastName,age,job and friends"
+//   );
+// }
+
+// sagar.location = "Mysore";
+// sagar["twitter"] = "@imsagarshaiva";
+// console.log(sagar);
+
+// console.log(
+//   `${sagar.lastName} has ${sagar.friends.length} friends, and his best friend is called ${sagar.friends[0]}`
+// );
+
+// challenge
+
+const sagar = {
+  firstName: "s",
+  lastName: "sagar",
+  birthYear: 2000,
+  job: "engineer",
+  friends: ["suraj", "madhu"],
+  hasDrivingLicense: true,
+
+  // calcAge: function (birthYear) {
+  //   return 2023 - birthYear;
+  // },
+  // calcAge: function () {
+  //   return 2023 - this.birthYear;
+  // },
+  calcAge: function () {
+    this.age = 2023 - this.birthYear;
+    return this.age;
+  },
+  getSummary: function () {
+    if (this.hasDrivingLicense) {
+      console.log(
+        `${this.lastName} is a ${this.calcAge()}-year old ${
+          this.job
+        }, and he has ${this.hasDrivingLicense ? "a" : "no"} driver's license`
+      );
+    }
+  },
+};
+
+console.log(sagar.calcAge());
+console.log(sagar["getSummary"]());
