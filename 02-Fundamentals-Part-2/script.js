@@ -142,7 +142,7 @@
 
 // console.log(ages);
 
-const friends = ["sagar", "suraj", "madhu", "shiva"];
+// const friends = ["sagar", "suraj", "madhu", "shiva"];
 
 // ADD ELEMENTS
 // const newLength = friends.push("Gani");
@@ -225,30 +225,36 @@ const friends = ["sagar", "suraj", "madhu", "shiva"];
 
 // challenge
 
-const sagar = {
-  firstName: "s",
-  lastName: "sagar",
-  birthYear: 2000,
-  job: "engineer",
-  friends: ["suraj", "madhu"],
-  hasDrivingLicense: true,
+// const sagar = {
+//   firstName: "s",
+//   lastName: "sagar",
+//   birthYear: 2000,
+//   job: "engineer",
+//   friends: ["suraj", "madhu"],
+//   hasDrivingLicense: true,
 
-  // calcAge: function (birthYear) {
-  //   return 2023 - birthYear;
-  // },
-  // calcAge: function () {
-  //   return 2023 - this.birthYear;
-  // },
-  calcAge: function () {
-    this.age = 2023 - this.birthYear;
-    return this.age;
-  },
-  getSummary: function () {
-    return `${this.lastName} is a ${this.calcAge()}-year old ${
-      this.job
-    }, and he has ${this.hasDrivingLicense ? "a" : "no"} driver's license`;
-  },
-};
+//   // calcAge: function (birthYear) {
+//   //   return 2023 - birthYear;
+//   // },
+//   // calcAge: function () {
+//   //   return 2023 - this.birthYear;
+//   // },
+//   calcAge: function () {
+//     this.age = 2023 - this.birthYear;
+//     return this.age;
+//   },
+//   getSummary: function () {
+//     return `${this.lastName} is a ${this.calcAge()}-year old ${
+//       this.job
+//     }, and he has ${this.hasDrivingLicense ? "a" : "no"} driver's license`;
+//   },
+// };
 
-console.log(sagar.calcAge());
-console.log(sagar["getSummary"]());
+// console.log(sagar.calcAge());
+// console.log(sagar["getSummary"]());
+
+// FOR LOOP ------------------------------------------
+
+for (let rep = 1; rep <= 10; rep++) {
+  console.log(`Repitition ${rep}`);
+}
