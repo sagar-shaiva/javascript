@@ -244,13 +244,9 @@ const sagar = {
     return this.age;
   },
   getSummary: function () {
-    if (this.hasDrivingLicense) {
-      console.log(
-        `${this.lastName} is a ${this.calcAge()}-year old ${
-          this.job
-        }, and he has ${this.hasDrivingLicense ? "a" : "no"} driver's license`
-      );
-    }
+    return `${this.lastName} is a ${this.calcAge()}-year old ${
+      this.job
+    }, and he has ${this.hasDrivingLicense ? "a" : "no"} driver's license`;
   },
 };
 
