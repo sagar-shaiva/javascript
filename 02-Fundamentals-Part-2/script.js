@@ -83,22 +83,92 @@
 
 // console.log(fruitProcessor(2, 3));
 
-const calcage = function (birthYear) {
-  return 2023 - birthYear;
-};
+// const calcage = function (birthYear) {
+//   return 2023 - birthYear;
+// };
 
-const yearUntilRetirement = function (birthYear, firstName) {
-  const age = calcage(birthYear);
+// const yearUntilRetirement = function (birthYear, firstName) {
+//   const age = calcage(birthYear);
 
-  const retirement = 65 - age;
+//   const retirement = 65 - age;
 
-  if (retirement > 0) {
-    console.log(`${firstName} retires in ${retirement} years`);
-    return retirement;
-  } else {
-    console.log(`${firstName} already retired`);
-    return -1;
-  }
-};
+//   if (retirement > 0) {
+//     console.log(`${firstName} retires in ${retirement} years`);
+//     return retirement;
+//   } else {
+//     console.log(`${firstName} already retired`);
+//     return -1;
+//   }
+// };
 
-console.log(yearUntilRetirement(2000, "sagar"));
+// console.log(yearUntilRetirement(2000, "sagar"));
+
+// ARRAYS ---------------------------------------------------
+
+// const friends = ["sagar", "suraj", "madhu", "shiva"];
+
+// console.log(friends[1]);
+// console.log(friends);
+// console.log(friends[0]);
+// console.log(friends.length);
+// console.log(friends[friends.length - 1]);
+
+// friends[2] = "sakura";
+// console.log(friends[2]);
+// // friends = ['yes','no'];
+
+// const firstName = "Sagar";
+// const sagar = ["Hi", firstName, 2023 - 2000, "nice friends", friends];
+
+// console.log(sagar);
+// console.log(sagar.length);
+
+// const calcAge = function (birthYear) {
+//   return 2023 - birthYear;
+// };
+
+// const years = [2000, 2001, 2007, 1982];
+
+// const age1 = calcAge(years[0]);
+// const age2 = calcAge(years[1]);
+// const age3 = calcAge(years[years.length - 1]);
+// console.log(age1, age2, age3);
+
+// const ages = [
+//   calcAge(years[0]),
+//   calcAge(years[1]),
+//   calcAge(years[years.length - 1]),
+// ];
+
+// console.log(ages);
+
+const friends = ["sagar", "suraj", "madhu", "shiva"];
+
+// ADD ELEMENTS
+const newLength = friends.push("Gani");
+console.log(friends);
+console.log(newLength);
+
+friends.unshift("Samurai");
+console.log(friends);
+
+// REMOVE ELEMENTS
+friends.pop(); // Last
+const popped = friends.pop();
+console.log(popped);
+console.log(friends);
+
+friends.shift();
+console.log(friends);
+
+friends.push(23);
+console.log(friends.indexOf("sagar"));
+console.log(friends.indexOf("mom"));
+console.log(friends.includes("sagar"));
+console.log(friends.includes("mom"));
+console.log(friends.includes("23"));
+console.log(friends.includes(23));
+
+if (friends.includes("suraj")) {
+  console.log("your friend suraj is there");
+}
