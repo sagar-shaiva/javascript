@@ -74,36 +74,63 @@
 
 // CODING EXERCISE 5---------------------------------
 
-const calcAverage = (score1, score2, score3) => {
-  return (score1 + score2 + score3) / 3;
-};
+// const calcAverage = (score1, score2, score3) => {
+//   return (score1 + score2 + score3) / 3;
+// };
 
-const scoreDolphins = function (score1, score2, score3) {
-  const avg = calcAverage(score1, score2, score3);
-  return avg;
-};
-const scoreKoalas = function (score1, score2, score3) {
-  const avg = calcAverage(score1, score2, score3);
-  return avg;
-};
+// const scoreDolphins = function (score1, score2, score3) {
+//   const avg = calcAverage(score1, score2, score3);
+//   return avg;
+// };
+// const scoreKoalas = function (score1, score2, score3) {
+//   const avg = calcAverage(score1, score2, score3);
+//   return avg;
+// };
 
-let avgDolphins = scoreDolphins(44, 23, 71);
-let avgKoalas = scoreKoalas(65, 54, 49);
+// let avgDolphins = scoreDolphins(44, 23, 71);
+// let avgKoalas = scoreKoalas(65, 54, 49);
 
-const checkWinner = function (avgDolphins, avgKoalas) {
-  if (avgDolphins >= avgKoalas * 2) {
-    console.log(`Dolphins win`);
-  } else if (avgKoalas >= avgDolphins * 2) {
-    console.log(`Koalas win`);
+// const checkWinner = function (avgDolphins, avgKoalas) {
+//   if (avgDolphins >= avgKoalas * 2) {
+//     console.log(`Dolphins win`);
+//   } else if (avgKoalas >= avgDolphins * 2) {
+//     console.log(`Koalas win`);
+//   } else {
+//     console.log("no team wins");
+//   }
+// };
+
+// //test 2 ------
+
+// avgDolphins = scoreDolphins(85, 54, 41);
+// avgKoalas = scoreKoalas(23, 34, 27);
+// console.log(avgDolphins, avgKoalas);
+
+// checkWinner(avgDolphins, avgKoalas);
+
+// CODING EXERCISE 6---------------------------------
+
+const calcTip = function (bill) {
+  if (bill >= 50 && bill <= 300) {
+    return bill * 0.15;
   } else {
-    console.log("no team wins");
+    return bill * 0.2;
   }
 };
 
-//test 2 ------
+const bills = [125, 555, 44];
 
-avgDolphins = scoreDolphins(85, 54, 41);
-avgKoalas = scoreKoalas(23, 34, 27);
-console.log(avgDolphins, avgKoalas);
+const tips = [
+  calcTip(bills[0]),
+  calcTip(bills[1]),
+  calcTip(bills[bills.length - 1]),
+];
 
-checkWinner(avgDolphins, avgKoalas);
+const totals = [
+  bills[0] + tips[0],
+  bills[1] + tips[1],
+  bills[bills.length - 1] + tips[tips.length - 1],
+];
+
+console.log(tips);
+console.log(totals);
