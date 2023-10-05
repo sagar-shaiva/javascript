@@ -110,27 +110,64 @@
 
 // CODING EXERCISE 6---------------------------------
 
-const calcTip = function (bill) {
-  if (bill >= 50 && bill <= 300) {
-    return bill * 0.15;
-  } else {
-    return bill * 0.2;
-  }
+// const calcTip = function (bill) {
+//   if (bill >= 50 && bill <= 300) {
+//     return bill * 0.15;
+//   } else {
+//     return bill * 0.2;
+//   }
+// };
+
+// const bills = [125, 555, 44];
+
+// const tips = [
+//   calcTip(bills[0]),
+//   calcTip(bills[1]),
+//   calcTip(bills[bills.length - 1]),
+// ];
+
+// const totals = [
+//   bills[0] + tips[0],
+//   bills[1] + tips[1],
+//   bills[bills.length - 1] + tips[tips.length - 1],
+// ];
+
+// console.log(tips);
+// console.log(totals);
+
+// CODING EXERCISE 7---------------------------------
+
+const mark = {
+  fullName: "Mark Miller",
+  mass: 78,
+  height: 1.69,
+  calcBMI: function () {
+    this.bmi = this.mass / (this.height * this.height);
+    return this.bmi;
+  },
 };
 
-const bills = [125, 555, 44];
+const john = {
+  fullName: "John Smith",
+  mass: 92,
+  height: 1.95,
+  calcBMI: function () {
+    this.bmi = this.mass / (this.height * this.height);
+    return this.bmi;
+  },
+};
 
-const tips = [
-  calcTip(bills[0]),
-  calcTip(bills[1]),
-  calcTip(bills[bills.length - 1]),
-];
+john.calcBMI();
+mark.calcBMI();
+if (mark.bmi > john.bmi) {
+  console.log(
+    `${mark.fullName}'s BMI (${mark.bmi}) is higher than ${john.fullName}'s (${john.bmi})!`
+  );
+} else if (john.bmi > mark.bmi) {
+  console.log(
+    `${john.fullName}'s BMI (${john.bmi}) is higher than ${mark.fullName}'s (${mark.bmi})!`
+  );
+}
 
-const totals = [
-  bills[0] + tips[0],
-  bills[1] + tips[1],
-  bills[bills.length - 1] + tips[tips.length - 1],
-];
-
-console.log(tips);
-console.log(totals);
+console.log(mark);
+console.log(john);
