@@ -255,6 +255,87 @@
 
 // FOR LOOP ------------------------------------------
 
-for (let rep = 1; rep <= 10; rep++) {
-  console.log(`Repitition ${rep}`);
+// for (let rep = 1; rep <= 10; rep++) {
+//   console.log(`Repitition ${rep}`);
+// }
+
+// const sagar = [
+//   "sagar",
+//   "S",
+//   2023 - 2000,
+//   "Engineer",
+//   ["suraj", "madhu", "shiva"],
+//   true,
+// ];
+
+// const types = [];
+
+// for (let i = 0; i < sagar.length; i++) {
+//   //reading array
+//   console.log(sagar[i], typeof sagar[i]);
+//   //filling types of array
+//   // types[i] = typeof sagar[i];
+//   types.push(typeof sagar[i]);
+// }
+
+// console.log(types);
+
+// const years = [1991, 2000, 2007, 2001];
+
+// const ages = [];
+
+// for (let i = 0; i < years.length; i++) {
+//   ages.push(2023 - years[i]);
+// }
+// console.log(ages);
+
+// // continue and break
+// console.log("--------ONLY STRINGS-------");
+// for (let i = 0; i < sagar.length; i++) {
+//   if (typeof sagar[i] !== "string") continue;
+//   console.log(sagar[i], typeof sagar[i]);
+// }
+
+// console.log("--------Break with number-------");
+// for (let i = 0; i < sagar.length; i++) {
+//   if (typeof sagar[i] === "number") break;
+//   console.log(sagar[i], typeof sagar[i]);
+// }
+
+const sagar = [
+  "sagar",
+  "S",
+  2023 - 2000,
+  "Engineer",
+  ["suraj", "madhu", "shiva"],
+];
+
+for (let i = sagar.length - 1; i >= 0; i--) {
+  console.log(sagar[i]);
+}
+
+for (let exercise = 1; exercise < 4; exercise++) {
+  console.log(`----------starting exercise ${exercise}`);
+
+  for (let rep = 1; rep < 6; rep++) {
+    console.log(`Exercise ${exercise}: Lifting weight repetition ${rep} 🏋️`);
+  }
+}
+
+let rep = 1;
+
+while (rep <= 10) {
+  console.log(`while: Lifting weights repetition ${rep}`);
+  rep++;
+}
+
+let dice = Math.trunc(Math.random() * 6) + 1;
+console.log(dice);
+
+while (dice !== 6) {
+  console.log(`you rolled a ${dice}`);
+  dice = Math.trunc(Math.random() * 6) + 1;
+  if (dice === 6) {
+    console.log(`loop is about to end ...`);
+  }
 }
