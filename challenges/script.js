@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 // Challenge 1
 
 // const massMark = 78;
