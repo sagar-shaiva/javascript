@@ -36,39 +36,127 @@
 // printAge();
 
 // hoisting and tdz------------------
-console.log(me);
-// console.log(job);
-// console.log(year);
+// console.log(me);
+// // console.log(job);
+// // console.log(year);
 
-var me = 'sagar';
-let job = 'engineer';
-const year = 2000;
+// var me = 'sagar';
+// let job = 'engineer';
+// const year = 2000;
 
-//functions
+// //functions
 
-console.log(addDecl(1, 2));
-console.log(addExpr(1, 2));
-console.log(addArrow(1, 2));
+// console.log(addDecl(1, 2));
+// console.log(addExpr(1, 2));
+// console.log(addArrow(1, 2));
 
-function addDecl(a, b) {
-  return a + b;
-}
+// function addDecl(a, b) {
+//   return a + b;
+// }
 
-const addExpr = function (a, b) {
-  return a + b;
-};
+// const addExpr = function (a, b) {
+//   return a + b;
+// };
 
-const addArrow = (a, b) => a + b;
+// const addArrow = (a, b) => a + b;
 
-// example
-if (!numProducts) deleteShoppingCart();
+// // example
+// if (!numProducts) deleteShoppingCart();
 
-var numProducts = 10;
+// var numProducts = 10;
 
-function deleteShoppingCart() {
-  console.log('All products deleted');
-}
+// function deleteShoppingCart() {
+//   console.log('All products deleted');
+// }
 
-var x = 1;
-var y = 2;
-const z = 3;
+// var x = 1;
+// var y = 2;
+// const z = 3;
+
+// this keyword
+
+// console.log(this);
+
+// const calcAge = function (birthYear) {
+//   console.log(2023 - birthYear);
+//   console.log(this);
+// };
+
+// calcAge(2000);
+
+// const calcAgeArrow = birthYear => {
+//   console.log(2023 - birthYear);
+//   console.log(this);
+// };
+
+// calcAgeArrow(2000);
+
+// const sagar = {
+//   year: 2000,
+//   calcAge: function () {
+//     console.log(this);
+//     console.log(2023 - this.year);
+//   },
+// };
+
+// sagar.calcAge();
+
+// const suraj = {
+//   year: 2001,
+// };
+
+// suraj.calcAge = sagar.calcAge;
+// suraj.calcAge();
+
+// const f = sagar.calcAge;
+// f();
+
+// regular vs arrow function
+
+// var firstaName = 'sagar';
+
+// const sagar = {
+//   firstaName: 'sagar',
+//   year: 2000,
+//   calcAge: function () {
+//     // console.log(this);
+//     console.log(2023 - this.year);
+
+//     //solution 1
+
+//     // const self = this;
+//     // const isMillenial = function () {
+//     //   console.log(self.year >= 1981 && self.year <= 1996);
+//     //   //   console.log(this.year >= 1981 && this.year <= 1996);
+//     // };
+//     // isMillenial();
+
+//     //solution 2
+
+//     const isMillenial = () => {
+//       console.log(this.year >= 1981 && this.year <= 1996);
+//       //   console.log(this.year >= 1981 && this.year <= 1996);
+//     };
+//     isMillenial();
+//   },
+//   greet: () => console.log(`hey ${this.firstaName}`),
+// };
+
+// sagar.calcAge();
+// sagar.greet();
+
+// const addExpr = function (a, b) {
+//   console.log(arguments);
+//   return a + b;
+// };
+// addExpr(2, 3);
+// addExpr(2, 3, 5, 7, 9);
+
+// const addArrow = (a, b) => {
+//   console.log(arguments);
+//   return a + b;
+// };
+
+// addArrow(2, 5, 8, 5);
+
+// primitives vs objects
