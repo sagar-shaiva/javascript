@@ -160,3 +160,58 @@
 // addArrow(2, 5, 8, 5);
 
 // primitives vs objects
+
+let age = 22;
+let oldAge = age;
+age = 23;
+console.log(age);
+console.log(oldAge);
+
+const me = {
+  name: 'sagar',
+  age: 23,
+};
+
+const friend = me;
+
+friend.age = 22;
+console.log('Me', me);
+console.log('friend', friend);
+
+let lastName = 'Sagar';
+let oldLastName = lastName;
+lastName = 'Sagari';
+console.log(oldLastName, lastName);
+2;
+
+const jessica = {
+  FirstName: 'Jessica',
+  lastName: 'Williams',
+  age: 23,
+};
+
+const marriedJessica = jessica;
+
+marriedJessica.lastName = 'Davis';
+
+console.log('before marraige', jessica);
+console.log('after marraige', marriedJessica);
+
+const jessica2 = {
+  FirstName: 'Jessica',
+  lastName: 'Williams',
+  age: 23,
+  family: ['madhu', 'shiva', 'nandini'],
+};
+
+const jessicaCopy = Object.assign({}, jessica2);
+jessicaCopy.lastName = 'Davis';
+
+console.log('before marraige', jessica2);
+console.log('after marraige', jessicaCopy);
+
+jessicaCopy.family.push('Mary');
+jessicaCopy.family.push('John');
+
+console.log('before marraige', jessica2);
+console.log('after marraige', jessicaCopy);
