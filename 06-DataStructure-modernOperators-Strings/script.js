@@ -52,10 +52,41 @@ const restaurant = {
   },
 };
 
+/////////////////////////////////////////////////////////
+
+//short circuiting
+console.log('----or-------------');
+console.log(3 || 'SAGAR');
+console.log('' || 'SAGAR');
+console.log(true || 'SAGAR');
+console.log(undefined || null);
+console.log(undefined || null || 0 || 'hello' || 23 || '');
+
+restaurant.numGuests = 23;
+const guests1 = restaurant.numGuests ? restaurant.numGuests : 10;
+
+console.log(guests1);
+
+const guests2 = restaurant.numGuests || 10;
+console.log(guests2);
+
+console.log('------------and-------------');
+
+console.log(0 && 'sagar');
+console.log(9 && 'sagar');
+
+console.log('hello' && 23 && null && 'sagar');
+
+if (restaurant.orderPizza) {
+  restaurant.orderPizza('mushroom', 'spinach');
+}
+
+restaurant.orderPizza && restaurant.orderPizza('mushrooms', 'spinach');
+
 ///////////////////////////////////////////////////////
 //rest pattern -----------------------
 //destructuring
-
+/*
 const arr = [1, 2, 3, ...[4, 5]];
 console.log(arr);
 
@@ -91,6 +122,7 @@ add(...x);
 restaurant.orderPizza('mushrooms', 'onions', 'olives', 'spinach');
 
 restaurant.orderPizza('mushroom');
+*/
 /////////////////////////////////////////////////////
 /*
 // spread operator
