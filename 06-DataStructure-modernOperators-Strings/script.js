@@ -52,8 +52,13 @@ const restaurant = {
   },
 };
 
-/////////////////////////////////////////////////////////
+// nullish and coalescing
+restaurant.numGuests = 0;
+const guests2 = restaurant.numGuests ?? 10;
+console.log(guests2);
 
+/////////////////////////////////////////////////////////
+/*
 //short circuiting
 console.log('----or-------------');
 console.log(3 || 'SAGAR');
@@ -82,6 +87,7 @@ if (restaurant.orderPizza) {
 }
 
 restaurant.orderPizza && restaurant.orderPizza('mushrooms', 'spinach');
+*/
 
 ///////////////////////////////////////////////////////
 //rest pattern -----------------------
