@@ -256,27 +256,48 @@ const game = {
   },
 };
 
-const [player1, player2] = game.players;
-console.log(player1, player2);
+// coding exercise 10-----------------------------------
 
-const [gk, ...fieldPlayers] = player1;
-console.log(gk, fieldPlayers);
+//1.
+for (const [i, player] of game.scored.entries()) {
+  console.log(`Goal ${i + 1} : ${player}`);
+}
 
-const allPlayers = [...player1, ...player2];
+//2.
+let average = 0;
+const odds = Object.values(game.odds);
+for (const odd in odds) {
+  average += odd;
+}
 
-const players1Final = [...player1, 'Thiago', 'Coutinho', 'Perisic'];
-console.log(players1Final);
+average /= odds.length;
+console.log(average);
 
-const {
-  odds: { team1, x: draw, team2 },
-} = game;
-console.log(team1, draw, team2);
+for (const [team, odds] of Object.entries(game.odds)) {
+  const teamstr = team === 'x' ? 'Draw' : `victory ${game[team]}`;
+  console.log(`odd of  ${teamstr} ${odds}`);
+}
+// const [player1, player2] = game.players;
+// console.log(player1, player2);
 
-const printGoals = function (...players) {
-  console.log(`${players.length} goal was scored`);
-};
+// const [gk, ...fieldPlayers] = player1;
+// console.log(gk, fieldPlayers);
 
-printGoals(...game.scored);
+// const allPlayers = [...player1, ...player2];
 
-team1 < team2 && console.log('team 1 likely to win');
-team1 > team2 && console.log('team 2 likely to win');
+// const players1Final = [...player1, 'Thiago', 'Coutinho', 'Perisic'];
+// console.log(players1Final);
+
+// const {
+//   odds: { team1, x: draw, team2 },
+// } = game;
+// console.log(team1, draw, team2);
+
+// const printGoals = function (...players) {
+//   console.log(`${players.length} goal was scored`);
+// };
+
+// printGoals(...game.scored);
+
+// team1 < team2 && console.log('team 1 likely to win');
+// team1 > team2 && console.log('team 2 likely to win');
