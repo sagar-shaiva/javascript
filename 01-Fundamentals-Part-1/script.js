@@ -43,3 +43,19 @@ console.log(typeof age);
 console.log(typeof null);
 
 */
+
+/*
+//let ,const ,var
+
+let age = 23;
+age = 24;
+
+const birthYear = 2000;
+//birthYear = 2000;
+
+// const job;
+
+var job = "programmer";
+
+job = "teacher";
+*/
