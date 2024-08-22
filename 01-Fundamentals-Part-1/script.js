@@ -59,3 +59,39 @@ var job = "programmer";
 
 job = "teacher";
 */
+
+/*
+// Basic operators
+
+//Math operators
+const now = 2024;
+const sagarAge = now - 2000;
+const madhuAge = now - 2007;
+
+console.log(sagarAge, madhuAge);
+
+console.log(sagarAge * 2, madhuAge * 2, 2 ** 3, 2 / 2);
+
+const firstName = "Sagar";
+const lastName = "S";
+console.log(firstName + " " + lastName);
+
+//assignment operarors
+
+let x = 10 + 5;
+x += 10;
+x *= 4;
+x++;
+x--;
+x--;
+
+console.log(x);
+
+//comparison operators
+console.log(sagarAge > madhuAge); // > ,<,>=,<=
+console.log(madhuAge >= 18);
+
+const isFullAge = madhuAge >= 18;
+
+console.log(now - 2000 > now - 2007);
+*/
