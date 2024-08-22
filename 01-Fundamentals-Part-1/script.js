@@ -95,3 +95,20 @@ const isFullAge = madhuAge >= 18;
 
 console.log(now - 2000 > now - 2007);
 */
+
+/*
+//operator precedence
+
+const now = 2024;
+const sagarAge = now - 2000;
+const madhuAge = now - 2007;
+
+console.log(now - 2000 > now - 2007);
+
+let x, y;
+x = y = 25 - 10 - 5;
+console.log(x, y);
+
+const averageAge = (sagarAge + madhuAge) / 2;
+console.log(sagarAge, madhuAge, averageAge);
+*/
