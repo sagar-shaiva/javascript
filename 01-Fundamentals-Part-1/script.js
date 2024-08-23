@@ -112,3 +112,26 @@ console.log(x, y);
 const averageAge = (sagarAge + madhuAge) / 2;
 console.log(sagarAge, madhuAge, averageAge);
 */
+
+//if else statement
+
+/*
+const age = 15;
+
+if (age >= 18) {
+  console.log("Sagar can start driving license🚗");
+} else {
+  const yearsLeft = 18 - age;
+  console.log(`Sagar is too young. Wait another ${yearsLeft} Years :)`);
+}
+
+const birthYear = 2000;
+let century;
+if (birthYear <= 2000) {
+  century = 20;
+} else {
+  century = 21;
+}
+
+console.log(century);
+*/
