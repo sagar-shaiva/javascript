@@ -190,3 +190,28 @@ if (height) {
   console.log("Height is undefined");
 }
 */
+/*
+//Equality Operators
+
+const age = "18";
+
+if (age === 18) console.log("You just became an adult (strict)");
+
+if (age == 18) console.log("You just became an adult (loose)");
+
+const favourite = Number(prompt('what"s your favourite number'));
+console.log(favourite);
+console.log(typeof favourite);
+
+if (favourite === 23) {
+  console.log("cool! 23 is an amazing number");
+} else if (favourite === 9) {
+  console.log("9 is a very good number");
+} else if (favourite === 2) {
+  console.log("2 is a fine good number");
+} else {
+  console.log("number is not 2,23 or 9");
+}
+
+if (favourite !== 23) console.log("why not 23");
+*/
