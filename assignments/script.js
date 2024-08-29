@@ -63,7 +63,7 @@ if (numNeighbours === 1) {
   console.log("No borders");
 }
 */
-
+/*
 //Switch statement
 
 const language = "english";
@@ -88,3 +88,13 @@ switch (language) {
   default:
     console.log("Great language too :D");
 }
+    */
+
+//condtitional ternary operator
+
+const country = "India";
+const population = 140;
+
+console.log(
+  `${country} population is ${population > 33 ? "above" : "below"} average`
+);
