@@ -240,3 +240,46 @@ if (hasDriversLicense && hasGoodVision) {
   console.log("Someone else should drive...");
 }
 */
+
+/*
+//Switch statement
+
+const day = "thursday";
+
+switch (day) {
+  case "monday":
+    console.log("Plan my course structure");
+    console.log("Go to coding meetup");
+    break;
+  case "tuesday":
+    console.log("Do all dare tasks");
+    break;
+  case "wednesday":
+  case "thursday":
+    console.log("Busy day");
+    break;
+  case "friday":
+    console.log("relax day");
+    break;
+  case "saturday":
+  case "sunday":
+    console.log("Weekend Funday");
+    break;
+  default:
+    console.log("Not a valid day");
+}
+
+if (day === "monday") {
+  console.log("Plan my course structure");
+  console.log("Go to coding meetup");
+} else if (day === "tuesday") {
+  console.log("Do all dare tasks");
+} else if (day === "wednesday" || day === "thursday") {
+  console.log("busy day");
+} else if (day === "friday") {
+  console.log("relax day");
+} else if (day === "saturday" || day === "sunday") {
+  console.log("Weekend Fun day");
+}
+
+*/
