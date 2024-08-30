@@ -90,6 +90,7 @@ switch (language) {
 }
     */
 
+/*
 //condtitional ternary operator
 
 const country = "India";
@@ -98,3 +99,18 @@ const population = 140;
 console.log(
   `${country} population is ${population > 33 ? "above" : "below"} average`
 );
+*/
+
+//Functions
+function describeCountry(country, population, capitalCity) {
+  const test = `${country} has ${population} million population and its capacity is ${capitalCity}`;
+  return test;
+}
+
+const test1 = describeCountry("India", 140, "NewDelhi");
+const test2 = describeCountry("USA", 40, "California");
+const test3 = describeCountry("China", 130, "hong-Kong");
+
+console.log(test1);
+console.log(test2);
+console.log(test3);
