@@ -101,3 +101,28 @@ function fruitProcessor(apples, oranges) {
 
 console.log(fruitProcessor(2, 3));
 */
+
+/*
+//reviewing functions
+
+const calcAge = function (birthYear) {
+  return 2024 - birthYear;
+};
+
+const yearsUntilRetirement = function (birthYear, firstName) {
+  const age = calcAge(birthYear);
+  const retirement = 65 - age;
+
+  if (retirement > 0) {
+    console.log(`${firstName} retires in ${retirement} years`);
+    return retirement;
+  } else {
+    console.log(`${firstName} already retired🎉`);
+    return -1;
+  }
+};
+
+console.log(yearsUntilRetirement(2000, "Sagar"));
+console.log(yearsUntilRetirement(2001, "Suraj"));
+console.log(yearsUntilRetirement(1959, "Unknown"));
+*/
