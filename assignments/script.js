@@ -101,7 +101,9 @@ console.log(
 );
 */
 
+/*
 //Functions
+
 function describeCountry(country, population, capitalCity) {
   const test = `${country} has ${population} million population and its capacity is ${capitalCity}`;
   return test;
@@ -114,3 +116,31 @@ const test3 = describeCountry("China", 130, "hong-Kong");
 console.log(test1);
 console.log(test2);
 console.log(test3);
+
+*/
+
+//Function declarations and expressions
+
+function percentageOfWorld1(population) {
+  return (population / 7900) * 100;
+}
+
+const indiaPop = percentageOfWorld1(1140);
+const chinaPop = percentageOfWorld1(1130);
+const usaPop = percentageOfWorld1(140);
+
+console.log(indiaPop);
+console.log(chinaPop);
+console.log(usaPop);
+
+const percentageOfWorld2 = function (population) {
+  return (population / 7900) * 100;
+};
+
+const indiaPop1 = percentageOfWorld2(1140);
+const chinaPop1 = percentageOfWorld2(1130);
+const usaPop1 = percentageOfWorld2(140);
+
+console.log(indiaPop1);
+console.log(chinaPop1);
+console.log(usaPop1);
