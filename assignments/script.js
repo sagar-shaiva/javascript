@@ -119,6 +119,8 @@ console.log(test3);
 
 */
 
+/*
+
 //Function declarations and expressions
 
 function percentageOfWorld1(population) {
@@ -144,3 +146,18 @@ const usaPop1 = percentageOfWorld2(140);
 console.log(indiaPop1);
 console.log(chinaPop1);
 console.log(usaPop1);
+
+*/
+/*
+//Arrow functions
+
+const percentageOfWorld3 = (population) => (population / 7900) * 100;
+
+const indiaPop2 = percentageOfWorld3(1140);
+const chinaPop2 = percentageOfWorld3(1130);
+const usaPop2 = percentageOfWorld3(140);
+
+console.log(indiaPop2);
+console.log(chinaPop2);
+console.log(usaPop2);
+*/
