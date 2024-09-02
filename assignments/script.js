@@ -162,6 +162,7 @@ console.log(chinaPop2);
 console.log(usaPop2);
 */
 
+/*
 //funtion calling other functions
 
 const percentageOfWorld1 = function (population) {
@@ -190,3 +191,20 @@ const percentage = [
 ];
 
 console.log(percentage);
+*/
+
+/*
+//Basic array methods
+const neighbours = ["Pakisthan", "China", "bangladesh", "Srilanka"];
+
+neighbours.push("Utopia");
+neighbours.pop();
+
+if (!neighbours.includes("Germany")) {
+  console.log("Probably not a central european country :D");
+}
+
+neighbours[neighbours.indexOf("China")] = "Replulic of China";
+
+console.log(neighbours);
+*/
