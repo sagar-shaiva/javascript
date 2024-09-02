@@ -171,3 +171,34 @@ const ages = [
 
 console.log(ages);
 */
+
+/*
+//Basic array methods
+const friends = ["Suraj", "Aishwarya", "Rajesh", "Yashwanth"];
+const newLength = friends.push("Swaroop");
+console.log(newLength);
+console.log(friends);
+
+friends.unshift("SuperMan");
+console.log(friends);
+
+//remove elements
+friends.pop();
+const popped = friends.pop();
+console.log(popped);
+console.log(friends);
+
+friends.shift();
+console.log(friends);
+
+friends.push(22);
+console.log(friends.indexOf("Suraj"));
+console.log(friends.indexOf("Bob"));
+console.log(friends.includes("Aishwarya"));
+console.log(friends.includes("Bob"));
+console.log(friends.includes(22));
+
+if (friends.includes("Suraj")) {
+  console.log("You have a friend called Suraj");
+}
+*/
