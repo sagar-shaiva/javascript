@@ -203,6 +203,7 @@ if (friends.includes("Suraj")) {
 }
 */
 
+/*
 //Introduction to objects
 
 const sagar = {
@@ -212,3 +213,46 @@ const sagar = {
   job: "Coder",
   friends: ["Suraj", "Rashmi", "Aishwarya", "Tejaswini"],
 };
+*/
+
+//dot vs bracket notation
+
+const sagar = {
+  firstName: "Sagar",
+  lastName: "S",
+  age: 2024 - 2000,
+  job: "Coder",
+  friends: ["Suraj", "Rashmi", "Aishwarya", "Tejaswini"],
+};
+
+console.log(sagar);
+
+console.log(sagar.firstName);
+console.log(sagar["lastName"]);
+
+const nameKey = "Name";
+
+console.log(sagar["first" + nameKey]);
+console.log(sagar["last" + nameKey]);
+
+const interestedIn = prompt(
+  "What do you want to know about Jonas? Choose between firstName,lastName,age,job and friends"
+);
+
+if (sagar[interestedIn]) {
+  console.log(sagar[interestedIn]);
+} else {
+  console.log(
+    "Wrong request  Choose between firstName,lastName,age,job and friends"
+  );
+}
+
+sagar.location = "Mysore";
+sagar["twitter"] = "@imsagarshaiva";
+console.log(sagar);
+
+//challenge
+
+console.log(
+  `${sagar.firstName} has ${sagar.friends.length} friends, and his bestfriend is called ${sagar.friends[0]}`
+);
