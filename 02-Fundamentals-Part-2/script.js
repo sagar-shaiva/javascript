@@ -126,3 +126,48 @@ console.log(yearsUntilRetirement(2000, "Sagar"));
 console.log(yearsUntilRetirement(2001, "Suraj"));
 console.log(yearsUntilRetirement(1959, "Unknown"));
 */
+
+/*
+//Arrays
+
+const friends = ["suraj", "Aishwarya", "Rajesh", "Yashwanth"];
+
+console.log(friends);
+
+const y = new Array(1996, 1998, 2000, 2001);
+
+console.log(y[0]);
+console.log(y[1]);
+
+console.log(friends.length);
+console.log(friends[friends.length - 1]);
+
+friends[2] = "Pramod";
+console.log(friends);
+
+const firstName = "Sagar";
+const sagar = [firstName, "S", 2024 - 2000, "Coder"];
+console.log(sagar);
+console.log(sagar.length);
+
+//exercise
+
+const calcAge = function (birthYear) {
+  return 2024 - birthYear;
+};
+
+const years = [1996, 1998, 2000, 2001];
+const age1 = calcAge(years[0]);
+const age2 = calcAge(years[1]);
+const age3 = calcAge(years[years.length - 1]);
+
+console.log(age1, age2, age3);
+
+const ages = [
+  calcAge(years[0]),
+  calcAge(years[1]),
+  calcAge(years[years.length - 1]),
+];
+
+console.log(ages);
+*/
