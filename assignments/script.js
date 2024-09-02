@@ -177,3 +177,16 @@ const describePopulation = function (country, population) {
 describePopulation("India", 144);
 describePopulation("China", 130);
 describePopulation("USA", 130);
+
+//Introduction to Arrays
+
+const population = [140, 130, 40, 35];
+console.log(population.length === 4);
+const percentage = [
+  percentageOfWorld1(population[0]),
+  percentageOfWorld1(population[1]),
+  percentageOfWorld1(population[2]),
+  percentageOfWorld1(population[3]),
+];
+
+console.log(percentage);
