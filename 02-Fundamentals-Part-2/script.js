@@ -202,3 +202,13 @@ if (friends.includes("Suraj")) {
   console.log("You have a friend called Suraj");
 }
 */
+
+//Introduction to objects
+
+const sagar = {
+  firstName: "Sagar",
+  lastName: "S",
+  age: 2024 - 2000,
+  job: "Coder",
+  friends: ["Suraj", "Rashmi", "Aishwarya", "Tejaswini"],
+};
