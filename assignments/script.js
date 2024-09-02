@@ -208,3 +208,14 @@ neighbours[neighbours.indexOf("China")] = "Replulic of China";
 
 console.log(neighbours);
 */
+/*
+//Introduction to objects
+
+const myCountry = {
+  country: "India",
+  capital: "Delhi",
+  language: "Kannada",
+  population: "6",
+  neighbours: ["Andra", "Telangana", "Tamil Nadu", "Maharashtra", "Kerala"],
+};
+*/
