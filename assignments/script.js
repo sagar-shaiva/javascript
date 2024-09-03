@@ -267,3 +267,21 @@ for (let i = 0; i < listOfNeighbours.length; i++) {
   }
 }
 */
+/*
+//while loop
+const populations = [10, 1441, 332, 83];
+
+const percentages3 = [];
+const percentageOfWorld1 = function (population) {
+  return (population / 790) * 100;
+};
+
+let i = 0;
+while (i < populations.length) {
+  const perc = percentageOfWorld1(populations[i]);
+  percentages3.push(perc);
+  i++;
+}
+
+console.log(percentages3);
+*/
