@@ -208,7 +208,7 @@ neighbours[neighbours.indexOf("China")] = "Replulic of China";
 
 console.log(neighbours);
 */
-
+/*
 //Introduction to objects
 
 const myCountry = {
@@ -233,3 +233,9 @@ myCountry.describe();
 myCountry.checkIsland();
 
 console.log(myCountry);
+*/
+
+//iteration for loop
+for (let vote = 1; vote <= 50; vote++) {
+  console.log(`Voter number ${vote} is currently voting`);
+}
