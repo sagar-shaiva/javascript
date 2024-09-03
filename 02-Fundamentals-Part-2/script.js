@@ -289,9 +289,54 @@ console.log(sagar.age);
 //challenge
 console.log(sagar.getSummary());
 */
-
+/*
 //Iteration
 
 for (let rep = 1; rep <= 10; rep++) {
   console.log(`I'm sagar , i go from ${rep}`);
+}
+  */
+
+//looping arrays,breaking and continuing
+
+const sagar = [
+  "Sagar",
+  "S",
+  2024 - 2000,
+  "Coder",
+  ["Suraj", "Rashmi", "Aishwarya", "Tejaswini"],
+];
+
+const types = [];
+for (let i = 0; i < sagar.length; i++) {
+  console.log(sagar[i], typeof sagar[i]);
+  //filling types of array
+  // types[i] = typeof sagar[i];
+  types.push(typeof sagar[i]);
+}
+console.log(types);
+
+const years = [1996, 1998, 2000, 2001, 2007];
+const ages = [];
+
+for (let i = 0; i < years.length; i++) {
+  ages.push(2024 - years[i]);
+}
+
+console.log(ages);
+
+//continue and break
+
+console.log("------only strings-------");
+for (let i = 0; i < sagar.length; i++) {
+  if (typeof sagar[i] !== "string") continue;
+
+  console.log(sagar[i], typeof sagar[i]);
+}
+
+console.log("------only number-------");
+for (let i = 0; i < sagar.length; i++) {
+  if (typeof sagar[i] == "number") break;
+
+  console.log(sagar[i], typeof sagar[i]);
 }
