@@ -214,7 +214,7 @@ const sagar = {
   friends: ["Suraj", "Rashmi", "Aishwarya", "Tejaswini"],
 };
 */
-
+/*
 //dot vs bracket notation
 
 const sagar = {
@@ -256,3 +256,34 @@ console.log(sagar);
 console.log(
   `${sagar.firstName} has ${sagar.friends.length} friends, and his bestfriend is called ${sagar.friends[0]}`
 );
+*/
+//object methods
+const sagar = {
+  firstName: "Sagar",
+  lastName: "S",
+  birthYear: 2000,
+  job: "Coder",
+  friends: ["Suraj", "Rashmi", "Aishwarya", "Tejaswini"],
+  hasDriversLicense: true,
+  // calcAge: function (birthYear) {
+  //   return 2024 - birthYear;
+  // },
+  calcAge: function () {
+    // console.log(this);
+    this.age = 2024 - this.birthYear;
+    return this.age;
+  },
+
+  getSummary: function () {
+    return `${this.firstName} is a ${this.calcAge()} old ${
+      this.job
+    }, and he has ${this.hasDriversLicense ? "a" : "no"} driver's license`;
+  },
+};
+
+console.log(sagar.calcAge());
+console.log(sagar.age);
+// console.log(sagar["calcAge"](2000));
+
+//challenge
+console.log(sagar.getSummary());
