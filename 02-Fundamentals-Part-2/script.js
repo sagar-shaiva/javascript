@@ -296,7 +296,7 @@ for (let rep = 1; rep <= 10; rep++) {
   console.log(`I'm sagar , i go from ${rep}`);
 }
   */
-
+/*
 //looping arrays,breaking and continuing
 
 const sagar = [
@@ -339,4 +339,28 @@ for (let i = 0; i < sagar.length; i++) {
   if (typeof sagar[i] == "number") break;
 
   console.log(sagar[i], typeof sagar[i]);
+}
+*/
+
+//looping backwards and loops in loops
+
+const sagar = [
+  "Sagar",
+  "S",
+  2024 - 2000,
+  "Coder",
+  ["Suraj", "Rashmi", "Aishwarya", "Tejaswini"],
+  true,
+];
+
+for (let i = sagar.length - 1; i >= 0; i--) {
+  console.log(sagar[i]);
+}
+
+for (let exercise = 1; exercise < 4; exercise++) {
+  console.log(`---------------starting exercise ${exercise}`);
+
+  for (let rep = 1; rep < 6; rep++) {
+    console.log(`Execise ${exercise}:lifting weight repition ${rep}`);
+  }
 }
