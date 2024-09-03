@@ -257,6 +257,7 @@ console.log(
   `${sagar.firstName} has ${sagar.friends.length} friends, and his bestfriend is called ${sagar.friends[0]}`
 );
 */
+/*
 //object methods
 const sagar = {
   firstName: "Sagar",
@@ -287,3 +288,10 @@ console.log(sagar.age);
 
 //challenge
 console.log(sagar.getSummary());
+*/
+
+//Iteration
+
+for (let rep = 1; rep <= 10; rep++) {
+  console.log(`I'm sagar , i go from ${rep}`);
+}
