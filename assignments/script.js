@@ -208,7 +208,7 @@ neighbours[neighbours.indexOf("China")] = "Replulic of China";
 
 console.log(neighbours);
 */
-/*
+
 //Introduction to objects
 
 const myCountry = {
@@ -217,5 +217,19 @@ const myCountry = {
   language: "Kannada",
   population: "6",
   neighbours: ["Andra", "Telangana", "Tamil Nadu", "Maharashtra", "Kerala"],
+  describe: function () {
+    console.log(
+      `${this.country} has ${this.population} million ${this.language}-speaking people, ${this.neighbours.length} neighbouring countries and a capital called ${this.capital}.`
+    );
+  },
+  checkIsland: function () {
+    this.isIsland = this.neighbours.length === 0 ? true : false;
+
+    // Even simpler version (see why this works...)
+    // this.isIsland = !Boolean(this.neighbours.length);
+  },
 };
-*/
+myCountry.describe();
+myCountry.checkIsland();
+
+console.log(myCountry);
