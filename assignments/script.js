@@ -234,8 +234,21 @@ myCountry.checkIsland();
 
 console.log(myCountry);
 */
-
+/*
 //iteration for loop
 for (let vote = 1; vote <= 50; vote++) {
   console.log(`Voter number ${vote} is currently voting`);
 }
+*/
+/*
+//looping arrays
+const populations = [10, 1441, 332, 83];
+const percentages2 = [];
+
+for (let i = 0; i < populations.length; i++) {
+  const perc = percentageOfWorld1(populations[i]);
+  percentages2.push(perc);
+}
+
+console.log(percentages2);
+*/
