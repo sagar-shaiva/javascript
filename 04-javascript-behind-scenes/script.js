@@ -1,35 +1,83 @@
 'use strict';
 
-function calcAge(birthYear) {
-  const age = 2024 - birthYear;
-  console.log(firstName);
+// scoping in practice--------------------------
 
-  function printAge() {
-    let output = `${firstName} you are ${age},born in ${birthYear}`;
-    console.log(output);
+// function calcAge(birthYear) {
+//   const age = 2024 - birthYear;
+//   console.log(firstName);
 
-    if (birthYear >= 1981 && birthYear <= 1996) {
-      var millenial = true;
+//   function printAge() {
+//     let output = `${firstName} you are ${age},born in ${birthYear}`;
+//     console.log(output);
 
-      //creating new varialble with same name as outer scope's variable
-      const firstName = 'S Sagar';
-      output = 'New Output!';
-      //reassigning outer scope variable
-      const str = `oh,and you're a millenial,${firstName}`;
-      console.log(str);
+//     if (birthYear >= 1981 && birthYear <= 1996) {
+//       var millenial = true;
 
-      function add(a, b) {
-        return a + b;
-      }
-    }
-    // console.log(str);
-    console.log(millenial);
-    // console.log(add(2,2));
-    console.log(output);
-  }
-  printAge();
-  return age;
+//       //creating new varialble with same name as outer scope's variable
+//       const firstName = 'S Sagar';
+//       output = 'New Output!';
+//       //reassigning outer scope variable
+//       const str = `oh,and you're a millenial,${firstName}`;
+//       console.log(str);
+
+//       function add(a, b) {
+//         return a + b;
+//       }
+//     }
+//     // console.log(str);
+//     console.log(millenial);
+//     // console.log(add(2,2));
+//     console.log(output);
+//   }
+//   printAge();
+//   return age;
+// }
+
+// const firstName = 'Sagar';
+// calcAge(1996);
+/*
+// Hoisting--------------------------
+
+//variables
+console.log(me);
+// console.log(job);
+// console.log(year);
+var me = 'Sagar';
+let job = 'Software Engineer';
+const year = 2000;
+
+// functions
+console.log(addDecl(1, 2));
+// console.log(addExpr(1, 2));
+// console.log(addArrow(1, 2));
+function addDecl(a, b) {
+  return a + b;
 }
 
-const firstName = 'Sagar';
-calcAge(1996);
+const addExpr = function (a, b) {
+  return a + b;
+};
+
+var addArrow = (a, b) => {
+  return a + b;
+};
+
+//example
+if (!numProducts) {
+  deleteShoppingCart();
+}
+var numProducts = 10;
+function deleteShoppingCart() {
+  console.log('All products deleted');
+}
+
+var x = 1;
+let y = 2;
+const z = 3;
+
+console.log(x === window.x);
+console.log(y === window.y);
+console.log(z === window.z);
+*/
+
+//
