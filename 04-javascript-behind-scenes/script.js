@@ -80,4 +80,40 @@ console.log(y === window.y);
 console.log(z === window.z);
 */
 
-//
+// This keyword---------------
+console.log(this);
+
+const calcAge = function (birthYear) {
+  console.log(2024 - birthYear);
+  console.log(this);
+};
+
+calcAge(2000);
+
+const calcAgeArrow = birthYear => {
+  console.log(2024 - birthYear);
+  console.log(this);
+};
+
+calcAgeArrow(2000);
+
+const sagar = {
+  year: 2000,
+  calcAge: function () {
+    console.log(this);
+    console.log(2024 - this.year);
+  },
+};
+
+sagar.calcAge();
+
+const madhu = {
+  year: 2007,
+};
+
+madhu.calcAge = sagar.calcAge;
+madhu.calcAge();
+
+const f = sagar.calcAge;
+
+f();
