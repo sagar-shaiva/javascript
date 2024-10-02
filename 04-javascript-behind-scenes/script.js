@@ -81,6 +81,7 @@ console.log(z === window.z);
 */
 
 // This keyword---------------
+/*
 console.log(this);
 
 const calcAge = function (birthYear) {
@@ -117,3 +118,55 @@ madhu.calcAge();
 const f = sagar.calcAge;
 
 f();
+*/
+
+//regular vs arrow function
+var firstName = 'S';
+const sagar = {
+  firstName: 'Sagar',
+  year: 2000,
+  calcAge: function () {
+    // console.log(this);
+    console.log(2024 - this.year);
+
+    //solution 1
+    // const self = this;
+    // const isMillenial = function () {
+    //   console.log(self);
+    //   console.log(self.year >= 1981 && self.year <= 1996);
+    // };
+
+    //solution 2
+    const isMillenial = () => {
+      console.log(this);
+      console.log(this.year >= 1981 && this.year <= 1996);
+    };
+    isMillenial();
+  },
+
+  greet: function () {
+    console.log(this);
+    console.log(`hey ${this.firstName}`);
+  },
+};
+
+sagar.greet();
+
+sagar.calcAge();
+
+//argument keyword
+const addExpr = function (a, b) {
+  console.log(arguments);
+
+  return a + b;
+};
+
+addExpr(2, 2);
+addExpr(2, 2, 4, 8);
+
+var addArrow = (a, b) => {
+  console.log(arguments);
+  a + b;
+};
+
+// addArrow(2, 3, 4); not exists multiple parameter in arrow function
