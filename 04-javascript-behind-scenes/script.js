@@ -120,6 +120,8 @@ const f = sagar.calcAge;
 f();
 */
 
+/*
+
 //regular vs arrow function
 var firstName = 'S';
 const sagar = {
@@ -170,3 +172,61 @@ var addArrow = (a, b) => {
 };
 
 // addArrow(2, 3, 4); not exists multiple parameter in arrow function
+*/
+/*
+//primitive vs objects (reference)
+
+let age = 24;
+let oldAge = age;
+age = 25;
+console.log(age);
+console.log(oldAge);
+
+const me = {
+  name: 'Sagar',
+  age: 24,
+};
+
+const friend = me;
+
+friend.age = 23;
+
+console.log('Friend', friend);
+console.log('me', me);
+
+
+//primitive types
+let lastName = 'S';
+let oldLastName = lastName;
+lastName = 'ShivakumaraSwamy';
+console.log(lastName, oldLastName);
+
+//reference types
+const sagar = {
+  firstName: 'S',
+  lastName: 'sagar',
+  age: 24,
+};
+
+const singleSagar = sagar;
+singleSagar.firstName = 'Shivakumaraswamy';
+
+console.log('before sagar', sagar);
+console.log('Single  sagar', singleSagar);
+
+// copying objects
+
+const sagar2 = {
+  firstName: 'S',
+  lastName: 'sagar',
+  age: 24,
+  family: ['Madhu', 'Nandini'],
+};
+
+const singleSagarCopy = Object.assign({}, sagar2);
+singleSagarCopy.firstName = 'ShivakumaraSwamy2';
+
+singleSagarCopy.family.push('ShivakumaraSwamy');
+console.log('before Sagar2', sagar2);
+console.log('after SingleSagarCopy', singleSagarCopy);
+*/
