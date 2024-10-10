@@ -565,7 +565,7 @@ printBookInfo({ title: 'Sagar', author: 'Sagar', year: 2024 });
 */
 
 //spread operator
-
+/*
 const bookAuthors = [...books[0].author, ...books[1].author];
 console.log(bookAuthors);
 const spellWord = function (word) {
@@ -573,3 +573,18 @@ const spellWord = function (word) {
 };
 
 spellWord('Sagar');
+*/
+
+//rest pattern and parameters
+
+const [mainKeyword, ...rest] = books[0].keywords;
+console.log(mainKeyword, rest);
+
+const { publisher: bookPublisher, ...restOfTheBooks } = books[1];
+console.log(bookPublisher, restOfTheBooks);
+
+const printBookAuthorsCount = function (title, ...authors) {
+  console.log(`The book ${title} has ${authors.length} authors`);
+};
+
+printBookAuthorsCount('"Sagar The Legend"', 'Sagar', 'Suraj', 'Others');
