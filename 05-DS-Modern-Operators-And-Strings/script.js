@@ -26,6 +26,11 @@ const restaurant = {
     );
   },
 
+  orderPasta: function (ing1, ing2, ing3) {
+    console.log(
+      `Here is your delicious pasta with ${ing1} , ${ing2} and ${ing3}`
+    );
+  },
   openingHours: {
     thu: {
       open: 12,
@@ -114,3 +119,46 @@ console.log(o, c);
 // const [p = 1, q = 1, r = 1] = [8, 9];
 // console.log(p, q, r);
 */
+
+//spread operator
+
+const arr = [7, 8, 9];
+const badNewArray = [1, 2, arr[0], arr[1]];
+
+console.log(badNewArray);
+
+const newArr = [1, 2, ...arr];
+console.log(newArr);
+console.log(...newArr);
+
+const newMenu = [...restaurant.mainMenu, 'Gnocci'];
+
+console.log(newMenu);
+const mainMenuCopy = [...restaurant.mainMenu];
+const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+
+console.log(menu);
+
+const str = 'Sagar';
+const letters = [...str, '', 'S.'];
+console.log(letters);
+console.log(...str);
+
+const ingredients = [
+  prompt("let's make Pasta! Ingredients 1?"),
+  prompt('Ingredeint 2?'),
+  prompt('prompt 3?'),
+];
+console.log(ingredients);
+
+restaurant.orderPasta(...ingredients);
+
+//objects
+const newRestaurant = { foundedIn: 2024, ...restaurant, founder: 'Sagar' };
+
+console.log(newRestaurant);
+
+const restaurantCopy = { ...restaurant };
+restaurantCopy.name = 'Sagar Foods';
+console.log(restaurantCopy);
+console.log(restaurant);
