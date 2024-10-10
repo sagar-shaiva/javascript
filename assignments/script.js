@@ -532,6 +532,7 @@ console.log(fiveStarRatings, oneStarRatings, threeStarRatings);
 */
 
 //destructuring objects
+/*
 const { title, author, ISBN } = books[0];
 console.log(title, author, ISBN);
 
@@ -561,3 +562,14 @@ const printBookInfo = function ({ title, author, year = 'unknown' }) {
 };
 
 printBookInfo({ title: 'Sagar', author: 'Sagar', year: 2024 });
+*/
+
+//spread operator
+
+const bookAuthors = [...books[0].author, ...books[1].author];
+console.log(bookAuthors);
+const spellWord = function (word) {
+  console.log(...word);
+};
+
+spellWord('Sagar');
