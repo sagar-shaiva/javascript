@@ -45,7 +45,46 @@ const restaurant = {
       close: 24,
     },
   },
+  orderPizza: function (mainIngredient, ...otherIngredients) {
+    console.log(mainIngredient);
+    console.log(otherIngredients);
+  },
 };
+
+//rest pattern and parameter
+const [a, b, ...others] = [1, 2, 3, 4, 5, 6];
+
+console.log(a, b, others);
+
+const [pizza, , risotto, ...otherFood] = [
+  ...restaurant.mainMenu,
+  ...restaurant.starterMenu,
+];
+
+console.log(pizza, risotto, otherFood);
+
+//objects
+
+const { sat, ...weekdays } = restaurant.openingHours;
+console.log(sat, weekdays);
+
+//function
+const add = function (...numbers) {
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++) sum += numbers[i];
+  console.log(sum);
+};
+
+add(1, 2);
+add(1, 2, 3);
+add(1, 2, 3, 4);
+add(1, 2, 3, 4, 5);
+
+const x = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+add(...x);
+
+restaurant.orderPizza('mushrooms', 'onion', 'olives', 'spinach');
+restaurant.orderPizza('mushrooms');
 
 //destructuring Objects///////////////////////////////
 /*
@@ -121,7 +160,7 @@ console.log(o, c);
 */
 
 //spread operator
-
+/*
 const arr = [7, 8, 9];
 const badNewArray = [1, 2, arr[0], arr[1]];
 
@@ -162,3 +201,4 @@ const restaurantCopy = { ...restaurant };
 restaurantCopy.name = 'Sagar Foods';
 console.log(restaurantCopy);
 console.log(restaurant);
+*/
