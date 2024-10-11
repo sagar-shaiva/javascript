@@ -591,6 +591,7 @@ printBookAuthorsCount('"Sagar The Legend"', 'Sagar', 'Suraj', 'Others');
 */
 
 //short circuiting
+/*
 function hasExamplesInJava(book) {
   console.log(book.programmingLanguage === 'Java' || 'no data available');
 }
@@ -600,4 +601,13 @@ hasExamplesInJava(books[1]);
 for (let i = 0; i < books.length; i++) {
   books[i].onlineContent &&
     console.log(`"${books[i].title}" provides online content`);
+}
+*/
+
+//nullish coalescing operator
+for (let i = 0; i < books.length; i++) {
+  books[i].onlineContent ??
+    console.log(
+      `"${books[i].title} provides no data about its online content"`
+    );
 }
