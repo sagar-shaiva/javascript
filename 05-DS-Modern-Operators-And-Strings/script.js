@@ -52,7 +52,7 @@ const restaurant = {
 };
 
 //nullish : null and undefined (not 0 and '')
-
+/*
 restaurant.numGuests = 0;
 const guests = restaurant.numGuests || 10;
 console.log(guests);
@@ -60,6 +60,7 @@ console.log(guests);
 const guestsCorrect = restaurant.numGuests ?? 10;
 
 console.log(guestsCorrect);
+*/
 //short circuiting operator
 
 /*
