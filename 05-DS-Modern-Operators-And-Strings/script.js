@@ -50,18 +50,43 @@ const restaurant = {
     console.log(otherIngredients);
   },
 };
+console.log('----------------or-----------');
+//short circuiting operator
+console.log(3 || 'Sagar');
+console.log('' || 'Sagar');
+console.log(true || 0);
+console.log(undefined || null);
+console.log(undefined || null || 0 || 'Hello' || 24);
+
+restaurant.numGuests = 23;
+const guests1 = restaurant.numGuests ? restaurant.numGuests : 10;
+console.log(guests1);
+const guests2 = restaurant.numGuests || 10;
+console.log(guests2);
+
+console.log('---------------and-----------');
+
+console.log(0 && 'sagar');
+console.log(9 && 'sagar');
+console.log('Hello' && 24 && null && 'Sagar');
+
+if (restaurant.orderPizza) {
+  restaurant.orderPizza('Capsicum', 'Paneer');
+}
+restaurant.orderPizza && restaurant.orderPizza('Mushroom', 'Corn');
 
 //rest pattern and parameter
+/*
 const [a, b, ...others] = [1, 2, 3, 4, 5, 6];
 
 console.log(a, b, others);
 
-const [pizza, , risotto, ...otherFood] = [
-  ...restaurant.mainMenu,
-  ...restaurant.starterMenu,
-];
+// const [pizza, , risotto, ...otherFood] = [
+//   ...restaurant.mainMenu,
+//   ...restaurant.starterMenu,
+// ];
 
-console.log(pizza, risotto, otherFood);
+// console.log(pizza, risotto, otherFood);
 
 //objects
 
@@ -85,7 +110,7 @@ add(...x);
 
 restaurant.orderPizza('mushrooms', 'onion', 'olives', 'spinach');
 restaurant.orderPizza('mushrooms');
-
+*/
 //destructuring Objects///////////////////////////////
 /*
 restaurant.orderDelivery({
