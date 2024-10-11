@@ -576,7 +576,7 @@ spellWord('Sagar');
 */
 
 //rest pattern and parameters
-
+/*
 const [mainKeyword, ...rest] = books[0].keywords;
 console.log(mainKeyword, rest);
 
@@ -588,3 +588,16 @@ const printBookAuthorsCount = function (title, ...authors) {
 };
 
 printBookAuthorsCount('"Sagar The Legend"', 'Sagar', 'Suraj', 'Others');
+*/
+
+//short circuiting
+function hasExamplesInJava(book) {
+  console.log(book.programmingLanguage === 'Java' || 'no data available');
+}
+
+hasExamplesInJava(books[1]);
+
+for (let i = 0; i < books.length; i++) {
+  books[i].onlineContent &&
+    console.log(`"${books[i].title}" provides online content`);
+}
