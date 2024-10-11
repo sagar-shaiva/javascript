@@ -50,8 +50,21 @@ const restaurant = {
     console.log(otherIngredients);
   },
 };
-console.log('----------------or-----------');
+
+//nullish : null and undefined (not 0 and '')
+
+restaurant.numGuests = 0;
+const guests = restaurant.numGuests || 10;
+console.log(guests);
+
+const guestsCorrect = restaurant.numGuests ?? 10;
+
+console.log(guestsCorrect);
 //short circuiting operator
+
+/*
+console.log('----------------or-----------');
+
 console.log(3 || 'Sagar');
 console.log('' || 'Sagar');
 console.log(true || 0);
@@ -74,7 +87,7 @@ if (restaurant.orderPizza) {
   restaurant.orderPizza('Capsicum', 'Paneer');
 }
 restaurant.orderPizza && restaurant.orderPizza('Mushroom', 'Corn');
-
+*/
 //rest pattern and parameter
 /*
 const [a, b, ...others] = [1, 2, 3, 4, 5, 6];
