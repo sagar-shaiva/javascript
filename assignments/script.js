@@ -605,9 +605,20 @@ for (let i = 0; i < books.length; i++) {
 */
 
 //nullish coalescing operator
+/*
 for (let i = 0; i < books.length; i++) {
   books[i].onlineContent ??
     console.log(
       `"${books[i].title} provides no data about its online content"`
     );
+}
+*/
+
+//logical assignment operator
+for (let i = 0; i < books.length; i++) {
+  books[i].edition ||= 1;
+}
+
+for (let i = 0; i < books.length; i++) {
+  books[i].highlighted &&= !(books[i].thirdParty.goodreads.rating < 4.2);
 }
