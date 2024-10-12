@@ -51,6 +51,35 @@ const restaurant = {
   },
 };
 
+//logical assignment operators
+const rest1 = {
+  name: 'Chapri',
+  numGuests: 0,
+};
+
+const rest2 = {
+  name: 'La Pizza',
+  owner: 'Sagar',
+};
+
+//or assignmnet operator
+
+// rest1.numGuests = rest1.numGuests || 10;
+// rest2.numGuests = rest2.numGuests || 10;
+// rest1.numGuests||=10;
+// rest2.numGuests||=10;
+
+//nullish assignment operator (null or undefined)
+
+rest1.numGuests ??= 10;
+rest2.numGuests ??= 10;
+// rest1.owner = rest1.owner && '<anonymous>';
+// rest2.owner = rest2.owner && '<anonymous>';
+rest1.owner &&= '<anonymous>';
+rest2.owner &&= '<anonymous>';
+console.log(rest1);
+console.log(rest2);
+
 //nullish : null and undefined (not 0 and '')
 /*
 restaurant.numGuests = 0;
