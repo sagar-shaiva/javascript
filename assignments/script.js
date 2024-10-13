@@ -665,7 +665,8 @@ const game = {
     team2: 6.5,
   },
 };
-
+//challenge1
+/*
 const [players1, players2] = game.players;
 
 console.log(players1, players2);
@@ -693,3 +694,29 @@ printGoals(...game.scored);
 
 team1 < team2 && console.log('Team 1 is more likely to win');
 team1 > team2 && console.log('Team 2 is more likely to win');
+*/
+
+//for-of loop
+let pageSum = 0;
+for (const item of books) {
+  pageSum += item.pages;
+}
+
+console.log(pageSum);
+
+const allAuthors = [];
+for (const book of books) {
+  if (typeof book.author === 'string') {
+    allAuthors.push(book.author);
+  } else {
+    for (const author of book.author) {
+      allAuthors.push(author);
+    }
+  }
+}
+
+console.log(allAuthors);
+
+for (const [i, el] of allAuthors.entries()) {
+  console.log(`${i + 1}: ${el}`);
+}
