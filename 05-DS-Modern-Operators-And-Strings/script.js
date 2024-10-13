@@ -50,8 +50,18 @@ const restaurant = {
     console.log(otherIngredients);
   },
 };
+//the for-of loop
+/*
+const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
 
+for (const item of menu) console.log(item);
+
+for (const [i, el] of menu.entries()) {
+  console.log(`${i + 1}: ${el}`);
+}
+*/
 //logical assignment operators
+/*
 const rest1 = {
   name: 'Chapri',
   numGuests: 0,
@@ -79,7 +89,7 @@ rest1.owner &&= '<anonymous>';
 rest2.owner &&= '<anonymous>';
 console.log(rest1);
 console.log(rest2);
-
+*/
 //nullish : null and undefined (not 0 and '')
 /*
 restaurant.numGuests = 0;
