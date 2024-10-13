@@ -747,3 +747,11 @@ const newBook2 = {
 
 console.log(newBook2);
 */
+
+//optional chaining
+
+function getFirstKeyword(book) {
+  return book.keywords?.[0];
+}
+
+getFirstKeyword(books[0]);
