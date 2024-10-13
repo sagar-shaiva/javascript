@@ -697,6 +697,7 @@ team1 > team2 && console.log('Team 2 is more likely to win');
 */
 
 //for-of loop
+/*
 let pageSum = 0;
 for (const item of books) {
   pageSum += item.pages;
@@ -720,3 +721,29 @@ console.log(allAuthors);
 for (const [i, el] of allAuthors.entries()) {
   console.log(`${i + 1}: ${el}`);
 }
+*/
+//enhanced object literals
+/*
+const bookData = [
+  ['title', 'Computer Networking: A Top-Down Approach'],
+  ['author', ['James F. Kurose', 'Keith W. Ross']],
+  ['publisher', 'Addison Wesley'],
+];
+
+// Do the rest
+const newBook = {
+  [bookData[0][0]]: bookData[0][1],
+  [bookData[1][0]]: bookData[1][1],
+  [bookData[2][0]]: bookData[2][1],
+};
+
+const pages = 880;
+
+const newBook2 = {
+  title: 'The C Programming Language',
+  author: ['Brian W. Kernighan', 'Dennis M. Ritchie'],
+  pages,
+};
+
+console.log(newBook2);
+*/
