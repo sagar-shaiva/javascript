@@ -667,6 +667,7 @@ const game = {
 };
 
 //challenge 2 DS
+/*
 //1.
 for (const [i, player] of game.scored.entries()) {
   console.log(`Goal ${i + 1}: ${player}`);
@@ -687,6 +688,7 @@ for (const [team, odd] of Object.entries(game.odds)) {
   const teamStr = team === 'x' ? 'draw' : `victory ${game[team]}`;
   console.log(`odd of ${teamStr} ${odd}`);
 }
+*/
 //challenge1
 /*
 const [players1, players2] = game.players;
@@ -777,4 +779,23 @@ function getFirstKeyword(book) {
 }
 
 getFirstKeyword(books[0]);
+*/
+
+//looping objects
+/*
+const entries = [];
+
+for (const key of Object.keys(books[0].thirdParty.goodreads)) {
+  entries.push([key]);
+}
+console.log(entries);
+
+for (const [index, value] of Object.values(
+  books[0].thirdParty.goodreads
+).entries()) {
+  entries[index].push(value);
+}
+
+const entries2 = Object.entries(books[0].thirdParty.goodreads);
+console.log(entries2);
 */
