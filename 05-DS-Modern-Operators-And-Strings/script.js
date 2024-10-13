@@ -47,9 +47,23 @@ const restaurant = {
     console.log(otherIngredients);
   },
 };
+//qoptional chaining
+const days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+console.log(restaurant.openingHours?.mon?.open);
+for (const day of days) {
+  console.log(day);
+  const open = restaurant.openingHours[day]?.open ?? 'closed';
+  console.log(`on ${day}, we open at ${open}`);
+}
 
-//enhanced object literal
+//methods
 
+console.log(restaurant.order?.(0, 1) ?? 'Method does not exists');
+console.log(restaurant.orderRisotto?.(0, 1) ?? 'Method does not exists');
+
+//arrays
+const users = [{ name: 'Sagar', email: 'sagar.2468@gmail.com' }];
+console.log(users[0]?.name ?? 'user array empty');
 //the for-of loop
 /*
 const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
