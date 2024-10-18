@@ -799,3 +799,21 @@ for (const [index, value] of Object.values(
 const entries2 = Object.entries(books[0].thirdParty.goodreads);
 console.log(entries2);
 */
+//Sets
+const allKeywords = [];
+for (const book of books) {
+  allKeywords.push(...book.keywords);
+}
+
+const uniqueKeywords = new Set(allKeywords);
+console.log(uniqueKeywords);
+uniqueKeywords.add('coding');
+uniqueKeywords.add('science');
+console.log(uniqueKeywords);
+uniqueKeywords.delete('business');
+console.log(uniqueKeywords);
+
+const uniqueKeywordsArray = [...uniqueKeywords];
+console.log(uniqueKeywordsArray);
+uniqueKeywords.clear();
+console.log(uniqueKeywords);
