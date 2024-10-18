@@ -48,8 +48,38 @@ const restaurant = {
   },
 };
 
-// looping objects:keys,values,entries
+//SETS
+const orderSet = new Set(['Pasta', 'Pizza', 'Risotto', 'Pizza', 'Pasta']);
 
+console.log(orderSet);
+
+console.log(new Set('Sagar'));
+
+console.log(orderSet.size);
+console.log(orderSet.has('Pizza'));
+console.log(orderSet.has('Bread'));
+orderSet.add('Garlic Bread');
+orderSet.add('Garlic Bread');
+console.log(orderSet);
+orderSet.delete('Risotto');
+// orderSet.clear();
+console.log(orderSet);
+for (const order of orderSet) console.log(order);
+
+//example
+
+const staff = ['waiter', 'chef', 'waiter', 'manager', 'chef', 'waiter'];
+
+const staffUnique = [...new Set(staff)];
+console.log(staffUnique);
+
+console.log(
+  new Set(['waiter', 'chef', 'waiter', 'manager', 'chef', 'waiter']).size
+);
+
+console.log(new Set('Sagar').size);
+// looping objects:keys,values,entries
+/*
 const properties = Object.keys(openingHours);
 console.log(properties);
 let openStr = `We are open on ${properties.length}`;
@@ -64,6 +94,7 @@ const entries = Object.entries(openingHours);
 for (const [key, { open, close }] of entries) {
   console.log(`on ${key} we open at ${open} and close at ${close}`);
 }
+*/
 //qoptional chaining
 /*
 const days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
