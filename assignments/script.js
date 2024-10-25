@@ -821,7 +821,7 @@ console.log(uniqueKeywords);
 */
 
 //maps
-
+/*
 const bookMap = new Map([
   ['title', 'Clean Code'],
   ['author', 'Robert C. Martin'],
@@ -836,4 +836,14 @@ console.log(bookMap.size);
 
 if (bookMap.has('author')) {
   console.log('The author of the book is known');
+}
+*/
+
+//maps iteration
+const firstBookMap = new Map(Object.entries(books[0]));
+
+for (const [key, value] of firstBookMap) {
+  if (typeof value === 'number') {
+    console.log(key);
+  }
 }
