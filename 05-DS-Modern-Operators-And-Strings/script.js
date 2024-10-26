@@ -48,7 +48,67 @@ const restaurant = {
   },
 };
 
+//working with strings part-2
+const airline = 'TAP Air Portugal';
+console.log(airline.toLowerCase());
+console.log(airline.toUpperCase());
+
+//fix capitalization in name
+
+const passenger = 'sagAR';
+const passengerLower = passenger.toLowerCase();
+const passengerCorrect =
+  passengerLower[0].toUpperCase() + passengerLower.slice(1);
+console.log(passengerCorrect);
+
+//comparing emails
+
+const email = 'hello@sagar.io';
+const loginEmail = '  Hello@sagar.io \n';
+
+const lowerEmail = loginEmail.toLowerCase();
+const trimmedEmail = loginEmail.trim();
+console.log(trimmedEmail);
+
+const normalizedEmail = loginEmail.toLowerCase().trim();
+
+console.log(email === normalizedEmail);
+//replacing
+const priceGB = '288.97€';
+const priceUS = priceGB.replace('€', '$').replace('.', ',');
+console.log(priceUS);
+
+const announcement =
+  'All passengers come to boarding door 23,Boarding door 23!';
+
+// console.log(announcement.replace('door','gate'));
+console.log(announcement.replaceAll('door', 'gate'));
+// console.log(announcement.replace(/door/g, 'gate'));
+
+const plane = 'Airbus A320neo';
+console.log(plane.includes('A320'));
+console.log(plane.includes('Boeing'));
+console.log(plane.startsWith('Airb'));
+if (plane.startsWith('Airb') && plane.endsWith('neo')) {
+  console.log('Part of the new Airbus family');
+}
+
+//practice exercise
+const checkbaggage = function (items) {
+  // const baggage = items;
+
+  const baggage = items.toLowerCase();
+  if (baggage.includes('knife') || baggage.includes('gun')) {
+    console.log('you are not allowed on board');
+  } else {
+    console.log('Welcome aboard!');
+  }
+};
+checkbaggage('I have a laptop,some food and a pocket Knife');
+checkbaggage('socks and camera');
+checkbaggage('got some snacks and a gun for protection');
 //working with strings part-1
+/*
 const airline = 'TAP Air Portugal';
 const plane = 'A320';
 
@@ -88,6 +148,7 @@ checkMiddeSeat('3E');
 
 console.log(typeof new String('Sagar'));
 console.log(typeof new String('Sagar').slice(-1));
+*/
 //maps iteration
 /*
 const question = new Map([
