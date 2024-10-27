@@ -925,3 +925,37 @@ function isContributor(author) {
 
 console.log(isContributor('Julie Sussman (Contributor)'));
 */
+//strings part-2
+/*
+function normalizeAuthorName(author) {
+  author = author.trim();
+  const firstName = author.slice(0, author.indexOf(' '));
+
+  let lastName = '';
+  if (author.indexOf(' ') === author.lastIndexOf(' ')) {
+    lastName = author.slice(author.indexOf(' ') + 1, author.length);
+  } else {
+    lastName = author.slice(author.indexOf(' ') + 1, author.lastIndexOf(' '));
+  }
+
+  const capitalizedFirstName =
+    firstName[0].toUpperCase() + firstName.slice(1).toLowerCase();
+  const capitalizedLastName =
+    lastName[0].toUpperCase() + lastName.slice(1).toLowerCase();
+
+  return capitalizedFirstName + ' ' + capitalizedLastName;
+}
+
+const newBookTitle = books[1].title.replace('Programs', 'Software');
+function logBookTheme(title) {
+  title = title.toLowerCase();
+
+  if (title.startsWith('computer')) {
+    console.log('This book is about computers');
+  } else if (title.includes('algorithms') && title.includes('structures')) {
+    console.log('This book is about algorithms and data structures');
+  } else if ((title.endsWith('system') || title.endsWith('systems')) && !title.includes('operating')) {
+    console.log('This book is about some systems, but definitely not about operating systems');
+  }
+}
+  */
