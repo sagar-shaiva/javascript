@@ -591,6 +591,7 @@ printBookAuthorsCount('"Sagar The Legend"', 'Sagar', 'Suraj', 'Others');
 */
 
 //short circuiting
+/*
 function hasExamplesInJava(book) {
   console.log(book.programmingLanguage === 'Java' || 'no data available');
 }
@@ -601,3 +602,444 @@ for (let i = 0; i < books.length; i++) {
   books[i].onlineContent &&
     console.log(`"${books[i].title}" provides online content`);
 }
+*/
+
+//nullish coalescing operator
+/*
+for (let i = 0; i < books.length; i++) {
+  books[i].onlineContent ??
+    console.log(
+      `"${books[i].title} provides no data about its online content"`
+    );
+}
+*/
+
+//logical assignment operator
+/*
+for (let i = 0; i < books.length; i++) {
+  books[i].edition ||= 1;
+}
+
+for (let i = 0; i < books.length; i++) {
+  books[i].highlighted &&= !(books[i].thirdParty.goodreads.rating < 4.2);
+}
+  */
+
+const game = {
+  team1: 'Bayern Munich',
+  team2: 'Borrussia Dortmund',
+  players: [
+    [
+      'Neuer',
+      'Pavard',
+      'Martinez',
+      'Alaba',
+      'Davies',
+      'Kimmich',
+      'Goretzka',
+      'Coman',
+      'Muller',
+      'Gnarby',
+      'Lewandowski',
+    ],
+    [
+      'Burki',
+      'Schulz',
+      'Hummels',
+      'Akanji',
+      'Hakimi',
+      'Weigl',
+      'Witsel',
+      'Hazard',
+      'Brandt',
+      'Sancho',
+      'Gotze',
+    ],
+  ],
+  score: '4:0',
+  scored: ['Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels'],
+  date: 'Nov 9th, 2037',
+  odds: {
+    team1: 1.33,
+    x: 3.25,
+    team2: 6.5,
+  },
+};
+
+//challenge 2 DS
+/*
+//1.
+for (const [i, player] of game.scored.entries()) {
+  console.log(`Goal ${i + 1}: ${player}`);
+}
+//2.
+const odds = Object.values(game.odds);
+let average = 0;
+
+for (const odd of odds) {
+  average += odd;
+}
+
+average /= odds.length;
+console.log(average);
+
+//3.
+for (const [team, odd] of Object.entries(game.odds)) {
+  const teamStr = team === 'x' ? 'draw' : `victory ${game[team]}`;
+  console.log(`odd of ${teamStr} ${odd}`);
+}
+*/
+//challenge1
+/*
+const [players1, players2] = game.players;
+
+console.log(players1, players2);
+
+const [gk, ...fieldPlayers] = players1;
+
+const allPlayers = [...players1, ...players2];
+console.log(allPlayers);
+
+const players1Final = [...players1, 'Thiago', 'Coutinho', 'Periscic'];
+
+const {
+  odds: { team1, x: draw, team2 },
+} = game;
+console.log(draw, team1, team2);
+
+const printGoals = function (...players) {
+  console.log(`${players.length} goals were scored`);
+};
+
+// printGoals('Davies', 'Muller', 'Lewandowski', 'Kimmich');
+
+// printGoals('Davies', 'Muller');
+printGoals(...game.scored);
+
+team1 < team2 && console.log('Team 1 is more likely to win');
+team1 > team2 && console.log('Team 2 is more likely to win');
+*/
+
+//for-of loop
+/*
+let pageSum = 0;
+for (const item of books) {
+  pageSum += item.pages;
+}
+
+console.log(pageSum);
+
+const allAuthors = [];
+for (const book of books) {
+  if (typeof book.author === 'string') {
+    allAuthors.push(book.author);
+  } else {
+    for (const author of book.author) {
+      allAuthors.push(author);
+    }
+  }
+}
+
+console.log(allAuthors);
+
+for (const [i, el] of allAuthors.entries()) {
+  console.log(`${i + 1}: ${el}`);
+}
+*/
+//enhanced object literals
+/*
+const bookData = [
+  ['title', 'Computer Networking: A Top-Down Approach'],
+  ['author', ['James F. Kurose', 'Keith W. Ross']],
+  ['publisher', 'Addison Wesley'],
+];
+
+// Do the rest
+const newBook = {
+  [bookData[0][0]]: bookData[0][1],
+  [bookData[1][0]]: bookData[1][1],
+  [bookData[2][0]]: bookData[2][1],
+};
+
+const pages = 880;
+
+const newBook2 = {
+  title: 'The C Programming Language',
+  author: ['Brian W. Kernighan', 'Dennis M. Ritchie'],
+  pages,
+};
+
+console.log(newBook2);
+*/
+
+//optional chaining
+/*
+function getFirstKeyword(book) {
+  return book.keywords?.[0];
+}
+
+getFirstKeyword(books[0]);
+*/
+
+//looping objects
+/*
+const entries = [];
+
+for (const key of Object.keys(books[0].thirdParty.goodreads)) {
+  entries.push([key]);
+}
+console.log(entries);
+
+for (const [index, value] of Object.values(
+  books[0].thirdParty.goodreads
+).entries()) {
+  entries[index].push(value);
+}
+
+const entries2 = Object.entries(books[0].thirdParty.goodreads);
+console.log(entries2);
+*/
+//Sets
+/*
+const allKeywords = [];
+for (const book of books) {
+  allKeywords.push(...book.keywords);
+}
+
+const uniqueKeywords = new Set(allKeywords);
+console.log(uniqueKeywords);
+uniqueKeywords.add('coding');
+uniqueKeywords.add('science');
+console.log(uniqueKeywords);
+uniqueKeywords.delete('business');
+console.log(uniqueKeywords);
+
+const uniqueKeywordsArray = [...uniqueKeywords];
+console.log(uniqueKeywordsArray);
+uniqueKeywords.clear();
+console.log(uniqueKeywords);
+*/
+
+//maps
+/*
+const bookMap = new Map([
+  ['title', 'Clean Code'],
+  ['author', 'Robert C. Martin'],
+]);
+
+bookMap.set('pages', 464);
+console.log(bookMap);
+
+console.log(`${bookMap.get('title')} by ${bookMap.get('author')}`);
+
+console.log(bookMap.size);
+
+if (bookMap.has('author')) {
+  console.log('The author of the book is known');
+}
+*/
+
+//maps iteration
+/*
+const firstBookMap = new Map(Object.entries(books[0]));
+
+for (const [key, value] of firstBookMap) {
+  if (typeof value === 'number') {
+    console.log(key);
+  }
+}
+*/
+
+//coding challenge 3
+/*
+Coding Challenge #3
+Let's continue with our football betting app! This time, we have a map called 
+'gameEvents' (see below) with a log of the events that happened during the 
+game. The values are the events themselves, and the keys are the minutes in which 
+each event happened (a football game has 90 minutes plus some extra time).
+Your tasks:
+1. Create an array 'events' of the different game events that happened (no 
+duplicates)
+2. After the game has finished, is was found that the yellow card from minute 64 
+was unfair. So remove this event from the game events log.
+3. Compute and log the following string to the console: "An event happened, on 
+average, every 9 minutes" (keep in mind that a game has 90 minutes)
+4. Loop over 'gameEvents' and log each element to the console, marking 
+whether it's in the first half or second half (after 45 min) of the game, like this:
+[FIRST HALF] 17: ⚽ GOAL
+*/
+/*
+const gameEvents = new Map([
+  [17, '⚽ GOAL'],
+  [36, '� Substitution'],
+  [47, '⚽ GOAL'],
+  [61, '� Substitution'],
+  [64, '� Yellow card'],
+  [69, '� Red card'],
+  [70, '� Substitution'],
+  [72, '� Substitution'],
+  [76, '⚽ GOAL'],
+  [80, '⚽ GOAL'],
+  [92, '� Yellow card'],
+]);
+
+//1.
+const events = [...[new Set(gameEvents.values())]];
+//2.
+gameEvents.delete(64);
+
+//3.
+console.log(`An event happened,every ${90 / gameEvents.size} minutes`);
+const time = [...gameEvents.keys()].pop();
+
+console.log(time);
+console.log(
+  `An event happened,on everage,every ${time / gameEvents.size} minutes`
+);
+
+//4.
+
+for (const [min, event] of gameEvents) {
+  const half = min <= 45 ? 'half' : 'Second';
+
+  console.log(`[${half} half] ${min}: ${event}`);
+}
+*/
+
+//strings part-1
+/*
+console.log(
+  books[0].ISBN['6'],
+  books[0].ISBN['4'],
+  books[0].ISBN['9'],
+  books[0].ISBN[8]
+);
+const quote =
+  'A computer once beat me at chess, but it was no match for me at kick boxing';
+console.log(quote.indexOf('chess'));
+console.log(quote.slice(quote.lastIndexOf(' ') + 1));
+
+function isContributor(author) {
+  return author.lastIndexOf('(Contributor)') !== -1;
+}
+
+console.log(isContributor('Julie Sussman (Contributor)'));
+*/
+//strings part-2
+/*
+function normalizeAuthorName(author) {
+  author = author.trim();
+  const firstName = author.slice(0, author.indexOf(' '));
+
+  let lastName = '';
+  if (author.indexOf(' ') === author.lastIndexOf(' ')) {
+    lastName = author.slice(author.indexOf(' ') + 1, author.length);
+  } else {
+    lastName = author.slice(author.indexOf(' ') + 1, author.lastIndexOf(' '));
+  }
+
+  const capitalizedFirstName =
+    firstName[0].toUpperCase() + firstName.slice(1).toLowerCase();
+  const capitalizedLastName =
+    lastName[0].toUpperCase() + lastName.slice(1).toLowerCase();
+
+  return capitalizedFirstName + ' ' + capitalizedLastName;
+}
+
+const newBookTitle = books[1].title.replace('Programs', 'Software');
+function logBookTheme(title) {
+  title = title.toLowerCase();
+
+  if (title.startsWith('computer')) {
+    console.log('This book is about computers');
+  } else if (title.includes('algorithms') && title.includes('structures')) {
+    console.log('This book is about algorithms and data structures');
+  } else if ((title.endsWith('system') || title.endsWith('systems')) && !title.includes('operating')) {
+    console.log('This book is about some systems, but definitely not about operating systems');
+  }
+}
+  */
+
+//strings part-3
+/*
+const bookCategories =
+  'science;computing;computer science;algorithms;business;operating systems;networking;electronics';
+function logBookCategories(str) {
+  const categories = str.split(';');
+
+  for (let category of categories) {
+    console.log(category);
+  }
+}
+logBookCategories(bookCategories);
+
+function getKeywordsAsString(books) {
+  const keywords = [];
+
+  for (const book of books) {
+    keywords.push(...book.keywords);
+  }
+
+  const uniqueKeywords = [...new Set(keywords)];
+  return uniqueKeywords.join(';');
+}
+console.log(getKeywordsAsString(books));
+
+const bookChapters = [
+  ['The Basics', 14],
+  ['Sorting', 254],
+  ['Searching', 372],
+  ['Graphs', 526],
+  ['Strings', 706],
+];
+function logBookChapters(chapters) {
+  for (const [chapter, pages] of chapters) {
+    console.log(chapter.padEnd(20, '_') + ' ' + pages);
+  }
+}
+logBookChapters(bookChapters);
+*/
+
+// Coding Challenge #4
+
+/*
+Write a program that receives a list of variable names written in underscore_case
+and convert them to camelCase.
+The input will come from a textarea inserted into the DOM (see code below to
+insert the elements), and conversion will happen when the button is pressed.
+Test data (pasted to textarea, including spaces):
+underscore_case
+first_name
+Some_Variable
+ calculate_AGE
+delayed_departure
+Should produce this output (5 separate console.log outputs):
+underscoreCase ✅
+firstName ✅✅
+someVariable ✅✅✅
+calculateAge ✅✅✅✅
+delayedDeparture ✅✅✅✅✅
+Hints:
+§ Remember which character defines a new line in the textarea �
+§ The solution only needs to work for a variable made out of 2 words, like a_b
+§ Start without worrying about the ✅. Tackle that only after you have the variable
+name conversion working �
+§ This challenge is difficult on purpose, so start watching the solution in case
+you're stuck. Then pause and continue!*/
+/*
+document.body.append(document.createElement('textarea'));
+document.body.append(document.createElement('button'));
+
+document.querySelector('button').addEventListener('click', function () {
+  const text = document.querySelector('textarea').value;
+  const rows = text.split('\n');
+  for (const [i, row] of rows.entries()) {
+    const [first, second] = row.toLowerCase().trim().split('_');
+    const output = `${first}${second.replace(
+      second[0],
+      second[0].toUpperCase()
+    )}`;
+    console.log(`${output.padEnd(20, ' ')}${'✅'.repeat(i + 1)}`);
+  }
+});
+*/
