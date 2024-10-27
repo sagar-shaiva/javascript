@@ -868,6 +868,7 @@ average, every 9 minutes" (keep in mind that a game has 90 minutes)
 whether it's in the first half or second half (after 45 min) of the game, like this:
 [FIRST HALF] 17: ⚽ GOAL
 */
+/*
 const gameEvents = new Map([
   [17, '⚽ GOAL'],
   [36, '� Substitution'],
@@ -903,3 +904,24 @@ for (const [min, event] of gameEvents) {
 
   console.log(`[${half} half] ${min}: ${event}`);
 }
+*/
+
+//strings part-1
+/*
+console.log(
+  books[0].ISBN['6'],
+  books[0].ISBN['4'],
+  books[0].ISBN['9'],
+  books[0].ISBN[8]
+);
+const quote =
+  'A computer once beat me at chess, but it was no match for me at kick boxing';
+console.log(quote.indexOf('chess'));
+console.log(quote.slice(quote.lastIndexOf(' ') + 1));
+
+function isContributor(author) {
+  return author.lastIndexOf('(Contributor)') !== -1;
+}
+
+console.log(isContributor('Julie Sussman (Contributor)'));
+*/
