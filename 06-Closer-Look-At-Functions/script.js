@@ -53,6 +53,7 @@ checkIn(flight, sagar);
 */
 
 //Function accepting callback functions
+/*
 const oneWord = function (str) {
   return str.replace(/ /g, '').toLowerCase();
 };
@@ -78,3 +79,19 @@ const high5 = function () {
 };
 document.body.addEventListener('click', high5);
 ['sagar', 'suraj', 'madhu'].forEach(high5);
+*/
+
+//funtion returning function
+const greet = function (greeting) {
+  return function (name) {
+    console.log(`${greeting} ${name}`);
+  };
+};
+
+const greetArr = greeting => name => console.log(`${greeting} ${name}`);
+
+const greeterHey = greet('Hey');
+greeterHey('Sagar');
+greeterHey('Sagara');
+greet('Hey')('Sagar');
+greetArr('Hey')('Sagar');
