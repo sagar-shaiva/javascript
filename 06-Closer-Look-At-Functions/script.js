@@ -225,6 +225,7 @@ string like "Poll results are 13, 2, 4, 1".
 data. Use both the 'array' and the 'string' option. Do not put the arrays in the poll 
 object! So what should the this keyword look like in this situation?
 */
+/*
 const poll = {
   question: 'What is your favourite programming language?',
   options: ['0: JavaScript', '1: Python', '2: Rust', '3: C++'],
@@ -260,3 +261,23 @@ document
 
 poll.displayResults.call({ answers: [1, 2, 3] }, 'string');
 poll.displayResults.call({ answers: [1, 2, 1] });
+*/
+
+//immediatly invoked fucntions IIFE
+const runOnce = function () {
+  console.log('This will never run again');
+};
+
+(function () {
+  console.log('This will never run again');
+  const isPrivate = 24;
+})();
+// console.log(isPrivate);
+(() => console.log('This will never run again'))();
+
+{
+  const isPrivate = 23;
+  var notPrivate = 42;
+}
+// console.log(isPrivate);
+console.log(notPrivate);
