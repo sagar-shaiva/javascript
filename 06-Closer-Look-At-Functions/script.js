@@ -264,6 +264,7 @@ poll.displayResults.call({ answers: [1, 2, 1] });
 */
 
 //immediatly invoked fucntions IIFE
+/*
 const runOnce = function () {
   console.log('This will never run again');
 };
@@ -281,3 +282,23 @@ const runOnce = function () {
 }
 // console.log(isPrivate);
 console.log(notPrivate);
+*/
+
+//Closers
+
+const secureBooking = function () {
+  let passengerCount = 0;
+
+  return function () {
+    passengerCount++;
+    console.log(`${passengerCount} passengers`);
+  };
+};
+
+const booker = secureBooking();
+
+booker();
+booker();
+booker();
+
+console.dir(booker);
