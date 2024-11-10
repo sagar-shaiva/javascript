@@ -81,7 +81,24 @@ displayMovements(account1.movements);
 // LECTURES
 
 /////////////////////////////////////////////////
+//Map array method------------------
+/*
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+const EurToUsd = 1.1;
 
+const movementsUsd = movements.map(mov => mov * EurToUsd);
+console.log(movements);
+console.log(movementsUsd);
+
+const movementsDescriptions = movements.map((mov, i) => {
+  console.log(
+    `Movement ${i + 1}: You ${mov > 0 ? 'deposited' : 'withdrew'} ${Math.abs(
+      mov
+    )}`
+  );
+});
+console.log(movementsDescriptions);
+*/
 //New at Method
 /*
 const arr = [23, 11, 64];
