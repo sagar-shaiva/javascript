@@ -61,6 +61,8 @@ const inputLoanAmount = document.querySelector('.form__input--loan-amount');
 const inputCloseUsername = document.querySelector('.form__input--user');
 const inputClosePin = document.querySelector('.form__input--pin');
 
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+
 const displayMovements = function (movements) {
   containerMovements.innerHTML = '';
   movements.forEach(function (mov, i) {
@@ -90,6 +92,15 @@ const createUserNames = function (accs) {
 
 createUserNames(accounts);
 console.log(accounts);
+
+//Filter method
+const deposits = movements.filter(function (mov) {
+  return mov > 0;
+});
+
+const withdrawals = movements.filter(mov => mov < 0);
+console.log(deposits);
+console.log(withdrawals);
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
