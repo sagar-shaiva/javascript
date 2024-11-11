@@ -91,9 +91,27 @@ const createUserNames = function (accs) {
 };
 
 createUserNames(accounts);
-console.log(accounts);
 
+//max value --
+const calcDisplayBalance = function (movements) {
+  const balance = movements.reduce((acc, mov) => acc + mov, 0);
+  labelBalance.textContent = `${balance} EUR`;
+};
+calcDisplayBalance(account1.movements);
+
+//max values
+/*
+const max = movements.reduce((acc, mov) => {
+  if (acc > mov) {
+    return acc;
+  } else {
+    return mov;
+  }
+}, movements[0]);
+console.log(max);
+*/
 //Filter method
+/*
 const deposits = movements.filter(function (mov) {
   return mov > 0;
 });
@@ -101,6 +119,12 @@ const deposits = movements.filter(function (mov) {
 const withdrawals = movements.filter(mov => mov < 0);
 console.log(deposits);
 console.log(withdrawals);
+*/
+//Reduce method--------------------------------
+/*
+const balance = movements.reduce((acc, cur) => acc + cur, 0);
+console.log(balance);
+*/
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
