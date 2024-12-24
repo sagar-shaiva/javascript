@@ -48,6 +48,18 @@ class Personcl {
   calcAge() {
     console.log(2025 - this.birthYear);
   }
+  get age() {
+    return 2025 - this.birthYear;
+  }
+
+  set fullName(name) {
+    if (name.includes('')) this._fullName = name;
+    else alert('Not full name');
+  }
+
+  get fullName() {
+    return this._fullName;
+  }
 }
 const sagar = new Personcl('sagar', 2000);
 
@@ -58,3 +70,5 @@ Personcl.prototype.greet = function () {
 };
 
 sagar.greet();
+
+//Getters and setters
