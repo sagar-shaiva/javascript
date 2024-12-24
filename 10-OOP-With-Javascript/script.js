@@ -23,3 +23,14 @@ console.log(sagar.species);
 
 console.log(sagar.hasOwnProperty('species'));
 console.log(sagar.hasOwnProperty('firstName'));
+
+//proptotypal inheritance on builtin objects
+console.log(sagar.__proto__.__proto__);
+const arr = [1, 2, 2, 3, 4, 5, 5];
+console.log(arr.__proto__ === Array.prototype);
+
+Array.prototype.unique = function () {
+  return [...new Set(this)];
+};
+
+console.log(arr.unique());
