@@ -60,6 +60,11 @@ class Personcl {
   get fullName() {
     return this._fullName;
   }
+
+  static hey() {
+    console.log('hey im static');
+    console.log(this);
+  }
 }
 const sagar = new Personcl('sagar', 2000);
 
@@ -70,5 +75,7 @@ Personcl.prototype.greet = function () {
 };
 
 sagar.greet();
+
+Personcl.hey();
 
 //Getters and setters
