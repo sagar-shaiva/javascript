@@ -78,4 +78,22 @@ sagar.greet();
 
 Personcl.hey();
 
-//Getters and setters
+const PersonProto = {
+  calcAge() {
+    console.log(2025 - this.birthYear);
+  },
+
+  init(firstName, birthYear) {
+    this.firstName = firstName;
+    this.birthYear = birthYear;
+  },
+};
+const steven = Object.create(PersonProto);
+console.log(steven);
+steven.firstName = 'steven';
+steven.birthYear = 2000;
+
+const sarah = Object.create(PersonProto);
+
+sarah.init('sarah', 2003);
+sarah.calcAge();
