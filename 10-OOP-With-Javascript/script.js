@@ -129,6 +129,8 @@ Student.prototype.constructor = Student;
 console.dir(Student.prototype.constructor);
 */
 
+//Inheritance ES6 classes
+/*
 class Personcl {
   constructor(firstName, birthYear) {
     this.firstName = firstName;
@@ -179,3 +181,35 @@ class StudentCl extends Personcl {
 const sagar = new StudentCl('S Sagar', 2000, 'M.tech');
 sagar.introduce();
 sagar.calcAge();
+*/
+
+//Inheritance Object.create
+
+const PersonProto = {
+  calcAge() {
+    console.log(2025 - this.birthYear);
+  },
+
+  init(firstName, birthYear) {
+    this.firstName = firstName;
+    this.birthYear = birthYear;
+  },
+};
+
+const sagar = Object.create(PersonProto);
+
+const StudentProto = Object.create(PersonProto);
+
+StudentProto.init = function (firstName, birthYear, course) {
+  PersonProto.init.call(this, firstName, birthYear);
+  this.course = course;
+};
+
+StudentProto.introduce = function () {
+  console.log(`My name is ${this.firstName} and I study ${this.course}`);
+};
+const jay = Object.create(StudentProto);
+jay.init('Sagar', 2000, 'M.tech');
+
+jay.introduce();
+jay.calcAge();
