@@ -38,7 +38,7 @@ console.log(arr.unique());
 */
 
 //ES6 classes
-
+/*
 class Personcl {
   constructor(firstName, birthYear) {
     this.firstName = firstName;
@@ -97,3 +97,32 @@ const sarah = Object.create(PersonProto);
 
 sarah.init('sarah', 2003);
 sarah.calcAge();
+*/
+
+//Inheriatance between classes  constructor functions
+const Person = function (firstName, birthYear) {
+  this.firstName = firstName;
+  this.birthYear = birthYear;
+};
+
+Person.prototype.calcAge = function () {
+  console.log(2025 - this.birthYear);
+};
+const Student = function (firstName, birthYear, course) {
+  Person.call(this, firstName, birthYear);
+
+  this.course = course;
+};
+
+Student.prototype = Object.create(Person.prototype);
+Student.prototype.introduce = function () {
+  console.log(`My name is ${this.firstName} and I study ${this.course}`);
+};
+
+const sagar = new Student('sagar', 2000, 'M.tech');
+sagar.introduce();
+sagar.calcAge();
+console.log(sagar instanceof Student);
+console.log(sagar instanceof Person);
+Student.prototype.constructor = Student;
+console.dir(Student.prototype.constructor);
