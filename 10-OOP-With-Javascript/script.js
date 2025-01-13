@@ -100,6 +100,7 @@ sarah.calcAge();
 */
 
 //Inheriatance between classes  constructor functions
+/*
 const Person = function (firstName, birthYear) {
   this.firstName = firstName;
   this.birthYear = birthYear;
@@ -126,3 +127,55 @@ console.log(sagar instanceof Student);
 console.log(sagar instanceof Person);
 Student.prototype.constructor = Student;
 console.dir(Student.prototype.constructor);
+*/
+
+class Personcl {
+  constructor(firstName, birthYear) {
+    this.firstName = firstName;
+    this.birthYear = birthYear;
+  }
+
+  calcAge() {
+    console.log(2025 - this.birthYear);
+  }
+  get age() {
+    return 2025 - this.birthYear;
+  }
+
+  set fullName(name) {
+    if (name.includes('')) this._fullName = name;
+    else alert('Not full name');
+  }
+
+  get fullName() {
+    return this._fullName;
+  }
+
+  static hey() {
+    console.log('hey im static');
+    console.log(this);
+  }
+}
+
+class StudentCl extends Personcl {
+  constructor(fullName, birthYear, course) {
+    //Always needs to happen first!
+    super(fullName, birthYear);
+    this.course = course;
+  }
+
+  introduce() {
+    console.log(`My name is ${this.fullName} and I study ${this.course}`);
+  }
+  calcAge() {
+    console.log(
+      `I'm ${2025 - this.birthYear} old but i feel like ${
+        2025 - this.birthYear + 10
+      }`
+    );
+  }
+}
+
+const sagar = new StudentCl('S Sagar', 2000, 'M.tech');
+sagar.introduce();
+sagar.calcAge();
