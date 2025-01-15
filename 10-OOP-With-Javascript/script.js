@@ -216,7 +216,7 @@ jay.calcAge();
 */
 
 //Another class
-
+/*
 class Account {
   constructor(owner, currency, pin) {
     this.owner = owner;
@@ -253,4 +253,54 @@ acc1.deposit(250);
 acc1.withdraw(140);
 acc1.requestLoan(1000);
 acc1, approveLoan(1000);
+console.log(acc1);
+*/
+
+//Encapsulation: private class Fields and Methods:
+//1) Public fields
+
+class Account {
+  locale = navigator.language;
+  bank = 'Bankist';
+  #movements = [];
+  #pin;
+  constructor(owner, currency, pin) {
+    this.owner = owner;
+    this.currency = currency;
+    this.#pin = pin;
+    // this.movements = [];
+    // this.locale = navigator.language;
+    console.log(`Thanks for opening an account, ${owner}`);
+  }
+
+  //Public Interface(API)
+
+  getMovements() {
+    return this.#movements;
+  }
+  deposit(val) {
+    this.#movements.push(val);
+  }
+
+  withdraw(val) {
+    this.deposit(-val);
+  }
+
+  #approveLoan(val) {
+    //Fake Method
+    return true;
+  }
+
+  requestLoan(val) {
+    if (this.approveLoan(val)) {
+      this.deposit(val);
+      console.log('Loan Approved');
+    }
+  }
+}
+
+const acc1 = new Account('Sagar', 'INR', 1111);
+acc1.deposit(1000);
+acc1.withdraw(140);
+// acc1.#approveLoan(420);
 console.log(acc1);
