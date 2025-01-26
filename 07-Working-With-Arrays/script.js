@@ -241,3 +241,5 @@ currenciesUnique.forEach(function (value, _, map) {
   console.log(`${value} : ${value}`);
 });
 */
+
+//Magic of Chaining Methods
