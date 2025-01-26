@@ -1207,7 +1207,7 @@ tesla.accelerate();
 // class. Then experiment with chaining!
 // Test data:
 // § Data car 1: 'Rivian' going at 120 km/h, with a charge of 23%
-
+/*
 class CarCl {
   constructor(make, speed) {
     this.make = make;
@@ -1269,6 +1269,7 @@ rivian
   .accelerate();
 
 console.log(rivian.speedUS);
+*/
 //Coding challenge-1 Working with Arrays
 /*
 Coding Challenge #1
