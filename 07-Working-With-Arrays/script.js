@@ -257,8 +257,15 @@ currenciesUnique.forEach(function (value, _, map) {
 */
 
 //Magic of Chaining Methods
-
+/*
 const EurToUsds = 1.1;
 
 const  totalDepositsUsd = movements.filter(mov=> mov>0).map(mov=> mov*EurToUsds).reduce((acc,mov)=>acc+mov,0);
 console.log(totalDepositsUsd);
+*/
+
+//The find method
+const firstWithdrawal = movements.find(mov=> mov<0);
+const account = accounts.find(acc=> acc.owner ==="Jessica Davis");
+console.log(account);
+console.log(firstWithdrawal);
