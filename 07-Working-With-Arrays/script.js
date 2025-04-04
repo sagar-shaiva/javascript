@@ -191,6 +191,35 @@ console.log(latestLargeMoventIndex);
 console.log(`Your latest large movement was ${movements.length - latestLargeMoventIndex} movements ago`);
 
 
+//some and every
+btnLoan.addEventListener('click',function(e){
+  e.preventDefault();
+
+  const amount = Number(inputLoanAmount.value);
+
+  if(amount>0 && currentAccount.movements.some(mov=>mov>=amount*0.1)){
+    currentAccount.movements.push(amount);
+updateUI(currentAccount);
+
+  }
+  inputLoanAmount.value='';
+})
+
+
+//SOME:condition
+console.log(movements.some(mov=>mov===-130));
+
+//every 
+
+console.log(movements.every(mov=>mov>0));
+
+console.log(account4.movements.every(mov=>mov>0));
+//separate call back
+const deposit = mov =>mov>0;
+
+console.log(movements.some(deposit));
+console.log(movements.every(deposit));
+console.log(movements.filter(deposit));
 //max values
 /*
 const max = movements.reduce((acc, mov) => {
