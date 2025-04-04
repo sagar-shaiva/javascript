@@ -178,6 +178,19 @@ btnClose.addEventListener('click',function(e){
     inputCloseUsername.value = inputClosePin.value='';
   }
 })
+
+//findlast and findlastindex
+console.log(movements);
+
+const lastWithdrawal = movements.findLast(mov =>mov<0);
+console.log(lastWithdrawal);
+
+
+const latestLargeMoventIndex = movements.findLastIndex(mov => Math.abs(mov)>2000);
+console.log(latestLargeMoventIndex);
+console.log(`Your latest large movement was ${movements.length - latestLargeMoventIndex} movements ago`);
+
+
 //max values
 /*
 const max = movements.reduce((acc, mov) => {
