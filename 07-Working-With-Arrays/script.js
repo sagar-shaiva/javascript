@@ -207,6 +207,7 @@ updateUI(currentAccount);
 
 
 //SOME:condition
+/*
 console.log(movements.some(mov=>mov===-130));
 
 //every 
@@ -220,6 +221,23 @@ const deposit = mov =>mov>0;
 console.log(movements.some(deposit));
 console.log(movements.every(deposit));
 console.log(movements.filter(deposit));
+*/
+
+//flat and flatMap
+
+const arr = [1,2,3,[4,5],6,7];
+const arr2 = [[[1,2,3],4],5,6,7];
+
+console.log(arr.flat());
+console.log(arr.flat(2));
+
+const overalBalance= accounts.map(acc=> acc.movements).flat().reduce((acc,mov)=>acc+mov,0);
+console.log(overalBalance);
+
+//flatMap
+
+const overalBalance2 = accounts.flatMap(acc=>acc.movements).reduce((acc,mov)=>acc+mov,0);
+console.log(overalBalance2);
 //max values
 /*
 const max = movements.reduce((acc, mov) => {
