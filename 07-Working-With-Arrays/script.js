@@ -453,6 +453,7 @@ console.log(movements);
 
 
 //grouping arrays
+/*
 const groupByMovements = Object.groupBy(movements,movement=>movement>0 ? 'deposits':'withdrawals');
 console.log(groupByMovements);
 
@@ -471,3 +472,35 @@ console.log(groupByActivity);
 const groupedAccounts = Object.groupBy(accounts,({type})=>type);
 
 console.log(groupedAccounts);
+*/
+
+//Creating and filling arrays
+
+const arr = [0,1,2,3,4,5,6,7,8,9];
+console.log(new Array(2,4,6,8,10,12,14));
+
+//empty array + fill method
+
+
+const x = new Array(7);
+console.log(x);
+
+x.fill(1,3,6);
+x.fill(1);
+console.log(x);
+
+arr.fill(21,3,7);
+console.log(arr);
+
+//Array from
+const y = Array.from({length:7},()=>1);
+console.log(y);
+const z = Array.from({length:7},(_,i)=>i+1);
+console.log(z);
+
+labelBalance.addEventListener('click',function(){
+const movementsUI = Array.from(document.querySelectorAll('.movements__value'),el => Number(el.textContent.replace('€','')));
+console.log(movementsUI);
+const movementsUI2 = [...document.querySelectorAll('.movements__value')];
+console.log(movementsUI2);
+});
