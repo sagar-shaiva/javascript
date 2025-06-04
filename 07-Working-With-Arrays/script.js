@@ -475,7 +475,7 @@ console.log(groupedAccounts);
 */
 
 //Creating and filling arrays
-
+/*
 const arr = [0,1,2,3,4,5,6,7,8,9];
 console.log(new Array(2,4,6,8,10,12,14));
 
@@ -504,3 +504,18 @@ console.log(movementsUI);
 const movementsUI2 = [...document.querySelectorAll('.movements__value')];
 console.log(movementsUI2);
 });
+*/
+
+// Non-Destructive Alternatives: toReversed, toSorted, toSpliced, with
+
+console.log(movements);
+const reversedMov = movements.toReversed();
+console.log(reversedMov);
+console.log(movements);
+
+// movements[1]=2000;
+
+const newMovements = movements.with(1,2000);
+console.log(newMovements);
+
+console.log(movements);
