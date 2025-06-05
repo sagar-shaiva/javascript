@@ -507,7 +507,7 @@ console.log(movementsUI2);
 */
 
 // Non-Destructive Alternatives: toReversed, toSorted, toSpliced, with
-
+/*
 console.log(movements);
 const reversedMov = movements.toReversed();
 console.log(reversedMov);
@@ -519,3 +519,50 @@ const newMovements = movements.with(1,2000);
 console.log(newMovements);
 
 console.log(movements);
+*/
+
+//1.
+
+const depositsSum = accounts.flatMap(accounts=> account1.movements).filter(mov=> mov>0).reduce((sum,cur)=>sum+cur,0);
+console.log(depositsSum);
+
+//2.
+
+// const numDeposits1000 = accounts.flatMap(acc=>acc.movements).filter(mov=>mov>=1000).length;
+// console.log(numDeposits1000);
+
+const numDeposits1000 = accounts.flatMap(acc=>acc.movements).reduce((count,cur)=> (cur>=1000?++count:count),0);
+console.log(numDeposits1000);
+
+//prefixed ++ operator
+
+let a = 10;
+console.log(a++);
+console.log(a);
+
+//3.
+
+const {deposits,withdrawals} = accounts.flatMap(account => account.movements).reduce((sums,cur)=> {
+
+  // cur >0?(sums.deposits+=cur):(sums.withdrawals+=cur);
+  sums[cur>0?'deposits':'withdrawals']+=cur;
+  return sums;
+},{deposits:0,withdrawals:0});
+console.log(deposits,withdrawals);
+
+//4.
+
+const convertTitleCase =function(title){
+  const capitalize = str=>str[0].toUpperCase()+ str.slice(1);
+  const exceptions = ['a','and','the','an','but','or','in','with'];
+
+  const titleCase= title.toLowerCase().split(' ').map(word=>exceptions.includes(word)?word:capitalize(word)).join(' ');
+
+  return capitalize(titleCase);
+}
+
+
+console.log(convertTitleCase('this Is an ancient Good boy'));
+console.log(convertTitleCase('sagar and Madhu are brothers'));
+console.log(convertTitleCase('Suraj and Sagar are Best friends'));
+console.log(convertTitleCase('WE are king of all the times'));
