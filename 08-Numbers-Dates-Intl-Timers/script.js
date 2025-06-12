@@ -358,7 +358,7 @@ labelBalance.addEventListener('click',function(){[...document.querySelectorAll('
 */
 
 //numeric seperators
-
+/*
 const diameter = 287_460_000_000;
 console.log(diameter);
 
@@ -370,4 +370,33 @@ console.log(PI);
 
 console.log(Number('23_000'));
 console.log(parseInt('230_000'));
+*/
 
+//bigint
+
+console.log(2**53-1);
+console.log(Number.MAX_SAFE_INTEGER);
+console.log(2**53+2);
+console.log(2**53+1);
+console.log(2**53+4);
+
+console.log(45671548317456871465734323n);
+console.log(BigInt('45671548317456871465734323'));
+console.log(100000n*100n);
+console.log(17632861n*78216784687478619n);
+
+const huge = 13719918818732687n;
+const num = 23;
+console.log(huge*BigInt(num));
+
+//exceptions
+console.log(20n>15);
+console.log(20n===20);
+console.log(typeof 20n);
+console.log(20n=='20');
+console.log(huge+' is really big number!');
+
+//divisions
+
+console.log(11n/3n);
+console.log(10/3);
