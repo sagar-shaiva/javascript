@@ -45,7 +45,7 @@ const account2 = {
     '2020-06-25T18:49:59.371Z',
     '2025-06-10T12:01:20.894Z',
   ],
-  currency: 'USD',
+  currency: 'US',
   locale: 'en-US',
 };
 
@@ -129,7 +129,7 @@ const formattedMov = formatCur(movement,acc.locale,acc.currency);
       i + 1
     } ${type}</div>
     <div class="movements__date">${displayDate}</div>
-        <div class="movements__value">${formattedMov}€</div>
+        <div class="movements__value">${formattedMov}</div>
       </div>
     `;
 
@@ -196,7 +196,20 @@ currentAccount = account1;
 updateUI(currentAccount);
 containerApp.style.opacity=100;
 
+//experimenting API
+   const now = new Date();
 
+   const options = {
+    hour:'numeric',
+    minute:'numeric',
+    day:'numeric',
+    month:'numeric',
+    year:'numeric',
+    // weekday:'long',
+   };
+
+  //  const locale = navigator.language;
+   labelDate.textContent = new Intl.DateTimeFormat(currentAccount.locale,options).format(now);
 
 
 
@@ -218,12 +231,12 @@ btnLogin.addEventListener('click', function (e) {
 
     // create current date and time
     const now = new Date();
-    const day = `${now.getDate()}`.padStart(2,0);
-    const month = `${now.getMonth()+1}`.padStart(2,0);
-    const year = now.getFullYear();
-    const hour = `${now.getFullYear()}`.padStart(2,0);
-    const min = `${now.getMinutes()}`.padStart(2,0);
-    labelDate.textContent= `${day}/${month}/${year},${hour}:${min}`;
+    // const day = `${now.getDate()}`.padStart(2,0);
+    // const month = `${now.getMonth()+1}`.padStart(2,0);
+    // const year = now.getFullYear();
+    // const hour = `${now.getFullYear()}`.padStart(2,0);
+    // const min = `${now.getMinutes()}`.padStart(2,0);
+    // labelDate.textContent= `${day}/${month}/${year},${hour}:${min}`;
     // Clear input fields
     inputLoginUsername.value = inputLoginPin.value = '';
     inputLoginPin.blur();
