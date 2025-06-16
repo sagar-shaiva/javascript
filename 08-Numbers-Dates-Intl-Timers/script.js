@@ -22,8 +22,8 @@ const account1 = {
     '2020-04-01T10:17:24.185Z',
     '2020-05-08T14:11:59.604Z',
     '2020-05-27T17:01:17.194Z',
-    '2020-07-11T23:36:17.929Z',
-    '2020-07-12T10:51:36.790Z',
+    '2025-06-15T23:36:17.929Z',
+    '2025-06-10T12:01:20.894Z',
   ],
   currency: 'EUR',
   locale: 'pt-PT', // de-DE
@@ -43,7 +43,7 @@ const account2 = {
     '2020-02-05T16:33:06.386Z',
     '2020-04-10T14:43:26.374Z',
     '2020-06-25T18:49:59.371Z',
-    '2020-07-26T12:01:20.894Z',
+    '2025-06-10T12:01:20.894Z',
   ],
   currency: 'USD',
   locale: 'en-US',
@@ -499,9 +499,16 @@ console.log(future.getTime());
 
 console.log(new Date(1779342071000));
 
-console.log(Date.now);
+console.log(Date.now());
 
 future.setFullYear(2050);
 console.log(future);
 */
 
+const future  = new Date(2026,3,21,15,11);
+console.log(+future);
+const calcDaysPassed = (date1,date2)=> Math.abs(date2-date1)/(1000*60*60*24);
+
+const days1 = calcDaysPassed(new Date(2000,3,21),new Date(2007,2,29));
+
+console.log(days1);
