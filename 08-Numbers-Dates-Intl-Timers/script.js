@@ -139,19 +139,19 @@ const formattedMov = formatCur(movement,acc.locale,acc.currency);
 
 const calcDisplayBalance = function (acc) {
   acc.balance = acc.movements.reduce((acc, mov) => acc + mov, 0);
-  labelBalance.textContent = `${acc.balance.toFixed(2)}€`;
+  labelBalance.textContent = formatCur(acc.balance,acc.locale,acc.currency);
 };
 
 const calcDisplaySummary = function (acc) {
   const incomes = acc.movements
     .filter(mov => mov > 0)
     .reduce((acc, mov) => acc + mov, 0);
-  labelSumIn.textContent = `${incomes.toFixed(2)}€`;
+  labelSumIn.textContent = formatCur(incomes,acc.locale,acc.currency);
 
   const out = acc.movements
     .filter(mov => mov < 0)
     .reduce((acc, mov) => acc + mov, 0);
-  labelSumOut.textContent = `${Math.abs(out).toFixed(2)}€`;
+  labelSumOut.textContent = formatCur(Math.abs(out),acc.locale,acc.currency);
 
   const interest = acc.movements
     .filter(mov => mov > 0)
@@ -161,7 +161,7 @@ const calcDisplaySummary = function (acc) {
       return int >= 1;
     })
     .reduce((acc, int) => acc + int, 0);
-  labelSumInterest.textContent = `${interest.toFixed(2)}€`;
+  labelSumInterest.textContent = formatCur(interest,acc.locale,acc.currency);
 };
 
 const createUsernames = function (accs) {
@@ -197,19 +197,19 @@ updateUI(currentAccount);
 containerApp.style.opacity=100;
 
 //experimenting API
-   const now = new Date();
+  //  const now = new Date();
 
-   const options = {
-    hour:'numeric',
-    minute:'numeric',
-    day:'numeric',
-    month:'numeric',
-    year:'numeric',
-    // weekday:'long',
-   };
+  //  const options = {
+  //   hour:'numeric',
+  //   minute:'numeric',
+  //   day:'numeric',
+  //   month:'numeric',
+  //   year:'numeric',
+  //   // weekday:'long',
+  //  };
 
-  //  const locale = navigator.language;
-   labelDate.textContent = new Intl.DateTimeFormat(currentAccount.locale,options).format(now);
+  // //  const locale = navigator.language;
+  //  labelDate.textContent = new Intl.DateTimeFormat(currentAccount.locale,options).format(now);
 
 
 
@@ -517,7 +517,7 @@ console.log(Date.now());
 future.setFullYear(2050);
 console.log(future);
 */
-
+/*
 const future  = new Date(2026,3,21,15,11);
 console.log(+future);
 const calcDaysPassed = (date1,date2)=> Math.abs(date2-date1)/(1000*60*60*24);
@@ -525,3 +525,16 @@ const calcDaysPassed = (date1,date2)=> Math.abs(date2-date1)/(1000*60*60*24);
 const days1 = calcDaysPassed(new Date(2000,3,21),new Date(2007,2,29));
 
 console.log(days1);
+*/
+
+const num = 121232.23;
+const options = {
+  style:'currency',
+  unit:'mile-per-hour',
+  currency:'INR',
+
+};
+console.log('US',new Intl.NumberFormat('en-US',options).format(num));
+console.log('Germany',new Intl.NumberFormat('de-DE',options).format(num));
+console.log('Syria',new Intl.NumberFormat('ar-SY',options).format(num));
+console.log(navigator.language,new Intl.NumberFormat(navigator.language,options).format(num));
