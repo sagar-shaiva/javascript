@@ -377,3 +377,26 @@ return createImg('img/img-2.jpg')
   currentImg.style.display='none';
 }).catch(err=>console.error(err));
 */
+
+//consuming promises with async/await
+
+const getPosition = function(){
+  return new Promise(function(resolve,reject){
+navigator.geolocation.getCurrentPosition(resolve,reject);
+
+  })
+};
+const whereAmI = async function () {
+  const pos= await getPosition();
+  const {latitude:lat,longitude:lng}= pos.coords;
+  const resGeo = await fetch(`https://us1.api-bdc.net/data/reverse-geocode-client?latitude=${lat}&longitude=${lng}`)
+  const dataGeo =await  resGeo.json();
+  console.log(dataGeo);
+  const res=await fetch(`https://restcountries.com/v2/name/${dataGeo.countryName}`)
+  const data= await res.json();
+  console.log(data);
+  renderCountry(data[1]);
+}
+
+whereAmI();
+console.log('FIRST');
