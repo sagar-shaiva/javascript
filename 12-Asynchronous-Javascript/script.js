@@ -379,7 +379,7 @@ return createImg('img/img-2.jpg')
 */
 
 //consuming promises with async/await
-
+/*
 const getPosition = function(){
   return new Promise(function(resolve,reject){
 navigator.geolocation.getCurrentPosition(resolve,reject);
@@ -430,3 +430,19 @@ console.error(`2:${err.message} 🔥`)
 }
 console.log('3:Finished getting location');
 })();
+*/
+
+const getThreeCountries = async function(c1,c2,c3) {
+  try{
+    const data = await Promise.all([getJson(`https://restcountries.com/v2/name/${c1}`),
+      getJson(`https://restcountries.com/v2/name/${c2}`),
+      getJson(`https://restcountries.com/v2/name/${c3}`)]);
+    console.log(data.map(d=>d[0].capital));
+  }
+  catch(err){
+console.error(err);
+  }
+  
+}
+
+getThreeCountries('portugal','china','russia');
