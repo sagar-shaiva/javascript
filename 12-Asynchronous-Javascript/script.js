@@ -206,7 +206,8 @@ const whereAmI = function(lat,lng){
 whereAmI(52.508,13.381);
 
 */
-
+//event loop in practice
+/*
 console.log('Test start');
 setTimeout(() => {
   console.log('0 sec timer');
@@ -220,3 +221,42 @@ Promise.resolve('Resolved promise 2').then(res=>{
   console.log(res);
 })
 console.log('Test end');
+*/
+
+//building a simple promise
+
+ const lotteryPromise  = new Promise(function(resolve,reject){
+console.log('Lotery draw is happenig 🏆');
+setTimeout(() => {
+  if(Math.random() >=0.5){
+  resolve('You win 💰')
+}else{
+  reject(new Error('You lost your money 💩'));
+}
+}, 2000);
+ });
+
+ lotteryPromise.then(res=>console.log(res)).catch(err=>console.log(err));
+
+ //promisifying setTimneout
+
+ const wait = function(seconds){
+  return new Promise(function(resolve){
+setTimeout(resolve,seconds*1000);
+  });
+ };
+
+ wait(1).then(()=>{
+  console.log('1 second passed');
+  return wait(1);
+ }).then(()=>{
+  console.log('2 second passed');
+  return wait(1);
+ }).then(()=>{
+  console.log('3 second passed');
+  return wait(1);
+ }).then(()=>console.log('4 second passed'));
+
+
+Promise.resolve('abc').then(x=>console.log(x));
+Promise.reject(new Error('Problem!')).catch(x=>console.error(x));
