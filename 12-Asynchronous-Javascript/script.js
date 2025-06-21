@@ -183,7 +183,7 @@ Test data:
 § Coordinates 2: 19.037, 72.873
 § Coordinates 3: -33.933, 18.474
 */
-
+/*
 const whereAmI = function(lat,lng){
   fetch(`https://us1.api-bdc.net/data/reverse-geocode-client?latitude=${lat}&longitude=${lng}`)
   .then(res=>{
@@ -204,6 +204,8 @@ const whereAmI = function(lat,lng){
   }).then(data=>renderCountry(data[0])).catch(err=> console.error(`${err.message} 🔥🔥`));
 };
 whereAmI(52.508,13.381);
+
+*/
 
 
  
