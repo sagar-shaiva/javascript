@@ -32,7 +32,7 @@ document.addEventListener('keydown', function (e) {
 
 
 ////////////////////////////////////
-
+/*
 //Selecting elements
 
 console.log(document.documentElement);
@@ -131,3 +131,4 @@ logo.classList.contains('C'); //not includes
 //dont use
 
 // logo.className = 'sagar';
+*/
