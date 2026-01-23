@@ -30,6 +30,61 @@ document.addEventListener('keydown', function (e) {
   }
 });
 
+///////////////////////////////////
+
+//button scroll
+// const btnScrollTo = document.querySelector('.btn--scroll-to');
+// const section1 = document.querySelector('#section--1');
+
+// btnScrollTo.addEventListener('click',function(e){
+
+//   const s1coords = section1.getBoundingClientRect();
+//   console.log(s1coords);
+//   console.log(e.target.getBoundingClientRect());
+
+//   console.log('Current scroll (x/y)',window.pageXOffset,window.pageYOffset);
+
+//   console.log('Height/Width viewport',document.documentElement.clientHeight,document.documentElement.clientWidth);
+
+//   // window.scrollTo(
+//   //   s1coords.left+window.pageXOffset,
+//   //   s1coords.top+window.pageYOffset
+//   // )
+
+//   section1.scrollIntoView({behavior:"smooth"});
+// })
+
+////////////////////////////////////////////
+//Page navigation
+
+// document.querySelectorAll('.nav__link').forEach(function(el){
+//   el.addEventListener('click',function(e){
+//     e.preventDefault();
+//     const id = this.getAttribute('href');
+//     console.log(id);
+
+//     document.querySelector(id).scrollIntoView({behavior:"smooth"});
+//   })
+// })
+
+//Event delegation
+
+//1.Add event listerner to common parent element
+//2. determine what element originated the event
+
+
+document.querySelector('.nav__links').addEventListener('click',function(e){
+  e.preventDefault();
+  
+  //matching strategy
+  if(e.target.classList.contains('nav__link')){
+     const id = e.target.getAttribute('href');
+    console.log(id);
+    document.querySelector(id).scrollIntoView({behavior:"smooth"});
+  }
+})
+
+
 
 ////////////////////////////////////
 /*
@@ -134,26 +189,6 @@ logo.classList.contains('C'); //not includes
 */
 
 /*
-const btnScrollTo = document.querySelector('.btn--scroll-to');
-const section1 = document.querySelector('#section--1');
-
-btnScrollTo.addEventListener('click',function(e){
-
-  const s1coords = section1.getBoundingClientRect();
-  console.log(s1coords);
-  console.log(e.target.getBoundingClientRect());
-
-  console.log('Current scroll (x/y)',window.pageXOffset,window.pageYOffset);
-
-  console.log('Height/Width viewport',document.documentElement.clientHeight,document.documentElement.clientWidth);
-
-  // window.scrollTo(
-  //   s1coords.left+window.pageXOffset,
-  //   s1coords.top+window.pageYOffset
-  // )
-
-  section1.scrollIntoView({behavior:"smooth"});
-})
 
 const h1 = document.querySelector('h1');
 
