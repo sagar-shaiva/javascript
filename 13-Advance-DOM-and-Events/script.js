@@ -7,7 +7,7 @@ const modal = document.querySelector('.modal');
 const overlay = document.querySelector('.overlay');
 const btnCloseModal = document.querySelector('.btn--close-modal');
 const btnsOpenModal = document.querySelectorAll('.btn--show-modal');
-
+const nav = document.querySelector('.nav');
 const openModal = function (e) {
   e.preventDefault();
   modal.classList.remove('hidden');
@@ -115,6 +115,27 @@ tabsContent.forEach(c=>c.classList.remove('operations__content--active'));
 
 })
 ////////////////////////////////////
+
+//Menu fade animation
+
+const handleHover = function(e){
+  if(e.target.classList.contains('nav__link')){
+    const link = e.target;
+    const siblings = link.closest('.nav').querySelectorAll('.nav__link');
+    const logo = link.closest('.nav').querySelector('img');
+
+    siblings.forEach(el => {
+      if(el!== link) el.style.opacity = this;
+    });
+
+    logo.style.opacity= this;
+  }
+}
+
+//Passing "argument" into handler
+nav.addEventListener('mouseover',handleHover.bind(0.5));
+nav.addEventListener('mouseout',handleHover.bind(1));
+
 /*
 //Selecting elements
 
