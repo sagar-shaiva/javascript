@@ -2,6 +2,11 @@
 
 console.log("Exporting values");
 
+
+//blocking code
+console.log('start fetching users');
+await fetch('https://jsonplaceholder.typicode.com/users');
+console.log('Finished fecthing users');
 export const shippingCost = 10;
 export const cart =[];
 
