@@ -1,4 +1,5 @@
 //importing value
+/*
 console.log('Importing values');
 // import shoppingCart, { addToCart,shippingCost,totalPrice as price , tq } from './shoppingCart.js';
 // addToCart('cake',2);
@@ -47,3 +48,36 @@ lastPost.then(last=>console.log(last));
 
 const lastPost2 = await getLastPost();
 console.log(lastPost2);
+
+*/
+
+//Module pattern
+
+const shoppingCart2 = (function(){
+    const cart = [];
+    const shippingCost = 20;
+    const totalPrice = 237;
+    const totalQuantity = 23;
+
+    const addToCart = function(product,quanity){
+        cart.push({product,quanity});
+        console.log(`${quanity} ${product} added to cart`);
+    };
+
+    const orderStock = function(product,quantity){
+        console.log(`${quantity} ${product} ordered from supplier`);
+    };
+
+    return {
+        addToCart,
+        cart,
+        totalPrice,
+        totalQuantity,
+    };
+}());
+
+shoppingCart2.addToCart('orange',10);
+shoppingCart2.addToCart('Apple',5);
+console.log(shoppingCart2);
+console.log(shoppingCart2.shippingCost);
+
